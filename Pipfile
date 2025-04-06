@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+motor = "*"
+databases = "*"
+authlib = "*"
+jwt = "*"
+pyjwt = "*"
+google-auth = "*"
+asyncio = "*"
+httpx = "*"
+gunicorn = "*"
+python-multipart = "*"
+pandas = "*"
+pyexcel-xlsx = "*"
+pyexcel = "*"
+fastapi = {extras = ["all"], version = "*"}
+uvicorn = {extras = ["standard"], version = "*"}
+python-jose = {extras = ["cryptography"], version = "*"}
+passlib = {extras = ["bcrypt"], version = "*"}
+loguru = "*"
+sqlalchemy = "*"
+asyncpg = "*"
+sqlmodel = "*"
+alembic = "*"
+psycopg2-binary = "*"
+requests = "*"
+stripe = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
