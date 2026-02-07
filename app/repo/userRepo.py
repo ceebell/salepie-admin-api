@@ -22,11 +22,11 @@ def get_password_hash(password):
 
 
     
-async def getUserByEmail( db: AsyncIOMotorClient, username: str) -> user.UserDb:
+async def getUserByEmail( db: AsyncIOMotorClient , email: str) -> user.UserDb:
 
-    # print(f" username  >>>> ",username)
+# print(f" email  >>>> ",email)
 
-    row = await db["ecouponv1"]["user"].find_one({ "username" :  username })
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
     # print(row)  
 
     if row:
@@ -35,7 +35,7 @@ async def getUserByEmail( db: AsyncIOMotorClient, username: str) -> user.UserDb:
 async def eCouponCreateUser(db: AsyncIOMotorClient, create: dict) -> dict:
     
     # print(create)
-    dbuser = user.UserDb(**create)
+    dbuser = user.UserDb(**create.model_dump())
     # print(dbuser)
 
 
@@ -44,25 +44,45 @@ async def eCouponCreateUser(db: AsyncIOMotorClient, create: dict) -> dict:
     dbuser.uid = util.getUuid()
     dbuser.hashedPassword = authRepo.get_password_hash(create["password"])
 
-    row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+    row = await db["salepiev1"]["user"].insert_one(dbuser.dict())
 
-    return dbuser.dict()
+    return dbuser.model_dump()
    
 
-async def createUser(db: AsyncIOMotorClient, create: user.UserCreate) -> user.UserDb:
-    dbuser = user.UserDb(**create.dict())
+async def createUserInTheSameDomain(db: AsyncIOMotorClient, create: user.UserCreate, currentUser) -> user.UserDb:
+    
+    payload = create.model_dump()
+    dbuser = user.UserDb(**payload)
     # dbuser.change_password(user.password)
     dbuser.uid = util.getUuid()
-    dbuser.hashedPassword = authRepo.get_password_hash(create.password)
-    row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+
+    # --- assign ให้อยู่ใน domain เดียวกับ current user ---
+    dbuser.domainId = currentUser.domainId
+
+    # --- ยังไม่ได้สร้าง Password ตอนนี้ สร้าง hash ให้กับ user นั้น  ---
+    # dbuser.hashedPassword = authRepo.get_password_hash(create.password)
+    row = await db["salepiev1"]["user"].insert_one(dbuser.model_dump())
+
+    return dbuser
+
+
+async def createUser(db: AsyncIOMotorClient, create: user.UserCreate) -> user.UserDb:
+    
+    payload = create.model_dump()
+    dbuser = user.UserDb(**payload)
+    # dbuser.change_password(user.password)
+    dbuser.uid = util.getUuid()
+
+    # dbuser.hashedPassword = authRepo.get_password_hash(create.password)
+    row = await db["salepiev1"]["user"].insert_one(dbuser.model_dump())
 
     return dbuser
 
 async def addSocialUser(db: AsyncIOMotorClient, create: user.SocialRegister) -> user.UserView:
-    dbuser = user.UserDb(**create.dict())
+    dbuser = user.UserDb(**create.dump_json())
     # dbuser.change_password(user.password)
     dbuser.id = util.getUuid()
-    row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+    row = await db["salepiev1"]["user"].insert_one(dbuser.dump_json())
     
     # print(f"after insert_one {row}")
     
@@ -74,14 +94,14 @@ async def addSocialUser(db: AsyncIOMotorClient, create: user.SocialRegister) -> 
 # 
 
 async def updateUser(db: AsyncIOMotorClient, update: user.UserUpdate) -> user.UserView:
-    dbuser = await getUserByEmail(db, update.username)
+    dbuser = await getUserByEmail(db, update.email)
     dbuser.password = update.password
     dbuser.isActive = update.isActive
     # dbuser.change_password(user.password)
 
-    # row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+    # row = await db["salepiev1"]["user"].insert_one(dbuser.dict())
 
-    updated_at = await db["ecouponv1"]["user"].update_one({"username": dbuser.username}, {'$set': dbuser.dict()})
+    updated_at = await db["salepiev1"]["user"].update_one({"email": dbuser.email}, {'$set': dbuser.dict()})
 
     return dbuser
 
@@ -103,8 +123,8 @@ async def updateImage (db: AsyncIOMotorClient, userdb: user.UserDb, imageList: L
     # print(f"\n\n\AFTER CONVERTING >>>> {updated_user}\n\n\n")
     
     # updated_user["tokenExpiredAt"] = updated_user["tokenExpiredAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-    # updated_user["createAt"] = updated_user["createAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-    # updated_user["update_At"] = updated_user["update_At"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    # updated_user["createDateTime"] = updated_user["createDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    # updated_user["updateDateTime"] = updated_user["updateDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
     
     existingImages.extend(imageList)
     updated_user["images"] = existingImages
@@ -114,7 +134,7 @@ async def updateImage (db: AsyncIOMotorClient, userdb: user.UserDb, imageList: L
     # print(f"\n\n\nimages >>>> {existingImages}\n\n\n")
     
     
-    updated = await db["ecouponv1"]["user"].update_one({"username": updated_user["username"]}, {'$set': updated_user })
+    updated = await db["salepiev1"]["user"].update_one({"email": updated_user["email"]}, {'$set': updated_user })
 
     # return user.UserView(**updated_user)
     return updated_user
@@ -131,7 +151,7 @@ async def userResponse(db: AsyncIOMotorClient, userdb: user.UserDb, activeToken:
     # resp_dict.update(
     # {
     #     "fullName": 'Jane Doe',
-    #     "username": 'janedoe',
+    #     "email": 'janedoe',
     #     "role": ['admin', "brand"],
     #     "refreshToken": 'ANnsdpfihpubfhsdf87897sdflaj',
     #     "ability": [
@@ -157,10 +177,10 @@ async def userResponse(db: AsyncIOMotorClient, userdb: user.UserDb, activeToken:
     loginResp["accessToken"] = activeToken
     # loginResp["refreshToken"] = activeToken
     
-    # row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+    # row = await db["salepiev1"]["user"].insert_one(dbuser.dict())
     # logger.info("updateToken >>> {0} ",loginResp)
 
-    updated_at = await db["ecouponv1"]["user"].update_one({"username": userdb.username}, {'$set': userdb.dict()})
+    updated_at = await db["salepiev1"]["user"].update_one({"email": userdb.email}, {'$set': userdb.dict()})
     
     if updated_at.modified_count == 1:
         return loginResp
@@ -168,34 +188,34 @@ async def userResponse(db: AsyncIOMotorClient, userdb: user.UserDb, activeToken:
         return dict()
 
 
-async def hardDelUser( db: AsyncIOMotorClient, username: str):
-    row = await db["ecouponv1"]["user"].find_one({ "username" :  username })
+async def hardDelUser( db: AsyncIOMotorClient, email: str):
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
     # logger.info("USER_REPO EMAIL: {0}",row)
 
     if row:
         return user.UserDb(**row)
    
-async def softDelUser( db: AsyncIOMotorClient, username: str):
-    row = await db["ecouponv1"]["user"].find_one({ "username" :  username })
+async def softDelUser( db: AsyncIOMotorClient, email: str):
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
     # logger.info("USER_REPO EMAIL: {0}",row)
 
     if row:
         return user.UserDb(**row)
 
-def whenCreate( model : dict , username: str): 
+def whenCreate( model : dict , email: str): 
     
     if "createBy" in model:
-        model["createBy"] = username
+        model["createBy"] = email
     if "updateBy" in model:
-        model["updateBy"] = username
+        model["updateBy"] = email
     
-    if "createAt" in model:
-        model["createAt"] = model["createAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    if "createDateTime" in model:
+        model["createDateTime"] = model["createDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
     if "updateAt" in model:
         model["updateAt"] = model["updateAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
         
-    if "update_At" in model:
-        model["update_At"] = model["update_At"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    if "updateDateTime" in model:
+        model["updateDateTime"] = model["updateDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
     
     return model
 
@@ -206,16 +226,16 @@ def convertDateTime( model : dict , fieldName: str):
     
     return model
 
-def whenUpdate( model : dict , username: str): 
+def whenUpdate( model : dict , email: str): 
     
     if "updateBy" in model:
-        model["updateBy"] = username
+        model["updateBy"] = email
     
     if "updateAt" in model:
             model["updateAt"] = model["updateAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
         
-    if "update_At" in model:
-        model["update_At"] = model["update_At"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    if "updateDateTime" in model:
+        model["updateDateTime"] = model["updateDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
     
     return model
 

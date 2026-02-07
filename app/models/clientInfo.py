@@ -28,5 +28,5 @@ class ClientInfoDb(ClientInfoBase):
     # password : Optional[str] = None
     isActive:  Optional[bool] = True
     # items: Optional[List[Item]] = []
-    createAt: Optional[datetime] =  Field(default_factory=datetime.utcnow)
-    update_At: Optional[datetime] =  Field(default_factory=datetime.utcnow)
+    createDateTime: Optional[datetime] =  Field(default_factory=datetime.utcnow)
+    updateDateTime: Optional[datetime] =  Field(default_factory=datetime.utcnow)

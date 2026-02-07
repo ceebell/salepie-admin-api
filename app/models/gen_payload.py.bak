@@ -1,0 +1,94 @@
+# file: gen_json.py
+import json
+from datetime import datetime
+from typing import List, Optional
+from pydantic import BaseModel, Field
+
+# --- 1. แปะ Model ที่ต้องใช้ (Mock ให้ครบ) ---
+def now():
+    return datetime.utcnow()
+
+class ProductImageInItemDB(BaseModel):
+    seq: Optional[int] = 0
+    getUrl: Optional[str] = None
+    description: Optional[str] = None
+    isMain: bool = False
+    filename: Optional[str] = None
+    
+class ProductIn(BaseModel):
+    name: str
+    code: Optional[str] = None
+    domainId: Optional[str] = "DUMMY-DOMAIN" # ใส่ default ไว้กัน error
+    category: Optional[str] = None
+    subCategory: Optional[str] = None
+    brand: Optional[str] = None
+    description: Optional[str] = None
+    images: List[ProductImageInItemDB] = []
+    
+class PriceList(BaseModel): # เพิ่ม Dummy เพราะใน Variant มีใช้
+    label: str = "Retail"
+    price: float = 0
+
+class ProductVariantIn(BaseModel):
+    productId: str
+    sku: str
+    barcode: Optional[str] = None
+    color: Optional[str] = None
+    size: Optional[str] = None
+    inStock: int = 0
+    standardPrice: float = 0
+    sellingPrice: float = 0
+    productCost: float = 0
+    pricelist: List[PriceList] = []
+
+class ProductCreateForm(BaseModel):
+    product: ProductIn
+    variants: List[ProductVariantIn] = Field(default_factory=list)
+
+# --- 2. สร้าง Mock Data ---
+
+dummy_product = ProductIn(
+    name="เสื้อยืด Cotton 100%",
+    code="TSHIRT-2025",
+    domainId="SHOP-001",
+    category="Clothing",
+    description="เสื้อยืดใส่สบาย ระบายอากาศดี",
+    images=[
+        ProductImageInItemDB(variantKey="color", variantValue="red", isMain=True, filename="tshirt-red.jpg"),
+        ProductImageInItemDB(variantKey="color", variantValue="yellow", isMain=True, filename="tshirt-red.jpg"),
+    ]
+)
+
+dummy_variant_1 = ProductVariantIn(
+    # productId="TEMP",
+    sku="TSHIRT-2025-RED-M",
+    color="red",
+    size="M",
+    inStock=50,
+    standardPrice=290,
+    sellingPrice=199
+)
+
+dummy_variant_2 = ProductVariantIn(
+    # productId="TEMP",
+    sku="TSHIRT-2025-RED-L",
+    color="red",
+    size="L",
+    inStock=30,
+    standardPrice=290,
+    sellingPrice=199
+)
+
+form = ProductCreateForm(
+    product=dummy_product,
+    variants=[dummy_variant_1, dummy_variant_2]
+)
+
+# --- 3. Print JSON ---
+if __name__ == "__main__":
+    # print(form.model_dump_json(indent=2)) # ใช้สำหรับ Pydantic v2
+    # ถ้าใช้ Pydantic v1 ให้ใช้ .json()
+    try:
+        print(form.model_dump_json(indent=2))
+    except AttributeError:
+        print(form.json(indent=2))

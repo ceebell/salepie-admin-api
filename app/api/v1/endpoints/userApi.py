@@ -1,6 +1,7 @@
+
 from typing import List, Optional , Any, Dict
 
-from fastapi import APIRouter, Depends, HTTPException, File, UploadFile, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException, Query, File, UploadFile, BackgroundTasks, File
 
 
 from repo import  userRepo, authRepo, fileRepo
@@ -21,98 +22,284 @@ from core.config  import AlexEmail
 import shutil
 
 from utils import util
+import math
+import uuid ,base64, re
+from pathlib import Path
+from datetime import datetime
 
 
 router = APIRouter()
 
 
-class Movie(BaseModel):
-    name: Optional[str] = ""
+# [u-4]
+@router.get("/get-user-by-id/{uid}",  tags=["user"] )
+async def getUserByID( uid:str,   db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+   
+
+    # print(f" **************** current user >>> ",currentUser)
+
+    if uid is None or uid == "":
+            raise HTTPException(status_code=400, detail="uid is required")
+    
+    aUser = await db["salepiev1"]["user"].find_one({ "uid" : uid , "deleted": { "$ne": True } , "domainId" : currentUser.domainId })
+
+    if aUser is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    try:
+        userOut =  user.UserOut(**aUser)
+    except:
+        raise HTTPException(status_code=500, detail="Data Converting Error")
+
+    return userOut
+
+
+# [u-5] get user list with pagination
+@router.get("/get-user-list-in-domain",  tags=["user"] )
+async def getUserListInDomain(
+    db: AsyncIOMotorClient =  Depends(get_database),  
+    currentUser  : user.UserDb = Depends(authRepo.get_current_active_user),
+    page: int = Query(1, ge=1),  # Default page = 1
+    page_size: int = Query(10, ge=1, le=100),  # Default page_size = 10
+    q: Optional[str] = Query(None),
+    itemStatus: Optional[str] = Query(None),
+    roles: Optional[List[str]] = Query(None),
+    sortBy: Optional[str] = Query(None)
+    ):
+
+    # ============================================
+    #  Begin: Variable preparation
+    # ============================================
+    criteria = {}
     
 
-async def get_user(conn: AsyncIOMotorClient) -> Movie:
-    # row = await conn[database_name][users_collection_name].find_one({"username": username})
-    row = await conn["alex_office_admin"]["movie"].find_one()
-    if row:
-        return Movie(**row)
+    
+    start = (page - 1) * page_size
+    end = start + page_size
+    
+    
+    if q:
+        criteria["textSearch"] = q
+    else:
+        criteria["textSearch"] = ""
+        
+    if itemStatus:
+        criteria["itemStatus"] = itemStatus
 
-async def get_multiple(conn: AsyncIOMotorClient) -> List[Movie]:
-    # row = await conn[database_name][users_collection_name].find_one({"username": username})
-    mm = []
+    if sortBy:
+        sorting = sortBy
 
-    #*** ถ้าเป็น list ไม่ต้องใส่ await ใช้ async ตรง for
-    rows = conn["alex_office_admin"]["movie"].find()
+    # ============================================
+    #  End: Variable preparation
+    # ============================================
+   
 
-    # async for row in rows:
-    #     mm.append(Movie(**row))
-    # Movie(**row)
+    rows = []
 
-    xx =   [Movie(**row) async for row in rows]
+    query = {
+                    "domainId": currentUser.domainId,
+                    "deleted": { "$ne": True },
+                    "$or": [
+                        { "email": { "$regex": criteria["textSearch"], "$options": "i" }},
+                        { "firstName": { "$regex": criteria["textSearch"], "$options": "i" }},
+                        { "lastName": { "$regex": criteria["textSearch"], "$options": "i" }},
+                        { "description": { "$regex": criteria["textSearch"], "$options": "i" }}
+                    ]
+                }
+    
+    # ++++++ เพิ่มส่วนนี้ครับ ++++++
+    if roles:
+        # $in จะหาว่าใน DB (ที่เป็น array) มีค่าใดค่าหนึ่งตรงกับใน input list หรือไม่
+        query["roles"] = { "$in": roles }
+    # +++++++++++++++++++++++++++
 
+    # นับจำนวนทั้งหมดก่อน (เพื่อให้ได้ totalItems ที่ถูกต้องตาม Filter)
+    totalItems =  await db["salepiev1"]["user"].count_documents(query)
 
-    return xx
+    # Query ข้อมูลตามหน้า
+    cursor = db["salepiev1"]["user"].find(query).sort("createDateTime", -1)
+    
+    # Apply Pagination ในระดับ Database (เร็วกว่าและประหยัด Ram กว่า)
+    cursor.skip(start).limit(page_size)
+
+    # 3. ดึงข้อมูลจริง (*** ต้อง await ***)
+    rows = await cursor.to_list(length=page_size)
+
+    # resp =   [user.UserOut(**row) async for row in rows]
+    resp = [user.UserOut(**row) for row in rows]
+
+    
+    if not resp:
+        return {
+            "success": True,
+            "page": 1,
+            "pageSize": 10,
+            "totalItems": 0,
+            "totalPages": 1,
+            "data": [],
+        } 
+        # raise HTTPException(
+        #           status_code=404, detail="Not Found Users"
+        #   )
     
 
-
-@router.get("/getUserList",  tags=["user"] ,  response_model=List[user.UserView])
-async def getUserList(db: AsyncIOMotorClient =  Depends(get_database)):
+    # data = resp[start:end]
+    # ไม่ต้อง slice resp[start:end] อีกแล้ว เพราะ resp คือข้อมูลของ page นั้นๆ แล้ว
+    data = resp
    
+
+    return {
+        "success": True,
+        "page": page,
+        "pageSize": page_size,
+        "totalItems": totalItems,
+        "totalPages": math.ceil(totalItems / page_size),
+        "data": data,
+    }   
+
+
+# [u-7] Change user active status  
+@router.post("/change-user-active",  tags=["user"] )
+async def changeUserStatus( activeForm : user.ActiveForm,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+    print(f"searchForm >>> ",activeForm.uid)
     try:
-        rows = db["ecouponv1"]["user"].find({})
-        xx =   [user.UserView(**row) async for row in rows]
-    except:
-        raise HTTPException(status_code=400, detail="Unable to get user list")
-
-    return xx
-
-@router.post("/get-user-in-domain/{id}",  tags=["user"] ,  response_model=List[user.UserForView])
-async def getUserInDomain(id: str, SearchForm: user.SearchForm,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
-   
-    try:
-        rows = db["ecouponv1"]["user"].find({ "domainId" : id })
-        xx =   [user.UserForView(**row) async for row in rows]
-    except:
-        raise HTTPException(status_code=400, detail="Unable to get user list")
-
-    return xx
-
-
-@router.post("/change-user-status",  tags=["user"] )
-async def changeUserStatus( searchForm : user.SearchForm,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
-    print(f"searchForm >>> ",searchForm.uid)
-    try:
-        row = await db["ecouponv1"]["user"].find_one({ "uid" : searchForm.uid })
+        row = await db["salepiev1"]["user"].find_one({ "uid" : activeForm.uid })
         userDb =   user.UserDb(**row) 
     except:
         raise HTTPException(status_code=400, detail="Unable to get user")
     
-    userDb.admin = searchForm.admin
-    edit = await db["ecouponv1"]["user"].update_one({"uid": searchForm.uid}, {'$set': userDb.dict() })
+    userDb.isActive = activeForm.isActive
+    edit = await db["salepiev1"]["user"].update_one({"uid": activeForm.uid}, {'$set': userDb.model_dump() })
 
-    return "OK"
+    return {
+        "success": True
+    }
 
-@router.post("/delete-user",  tags=["user"] )
-async def deleteUserInDomain( searchForm : user.SearchForm,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
-    print(f"searchForm >>> ",searchForm.uid)
+
+# [u-6] Edit my profile
+@router.post("/edit-my-profile",  tags=["user"] )
+async def editMyProfile( 
+            editForm : user.UserEditProfile,  
+            db: AsyncIOMotorClient =  Depends(get_database),  
+            currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+    # print(f"searchForm >>> ",searchForm.uid)
+
     try:
-        result  = await db["ecouponv1"]["user"].delete_one({ "uid" : searchForm.uid })
+        row = await db["salepiev1"]["user"].find_one({ "uid" : currentUser.uid })
+        userDb =   user.UserDb(**row) 
+    except:
+        raise HTTPException(status_code=400, detail="Unable to get user")
+    
+    userDb.firstName = editForm.firstName
+    userDb.lastName  = editForm.lastName
+    userDb.address   = editForm.address
+    userDb.phone     = editForm.phone
+    userDb.phone     = editForm.phone
+    userDb.isActive  = editForm.isActive
+    userDb.roles     = editForm.roles
+    userDb.status    = editForm.status
+    userDb.updateDateTime = datetime.now(),
+
+    # ---- handle images array ----
+    new_images = []
+
+    # print("editForm.images >>>>>>> {editForm.images}")
+
+    for idx, img in enumerate(editForm.images or []):
+        # ถ้าส่ง deleted มา → เก็บสถานะไว้ (ตามโครงสร้างคุณ)
+        print("* * * * *This is images ")
+        if img.deleted:
+            new_images.append({
+                "seq": img.seq if img.seq is not None else idx,
+                "deleted": True,
+            })
+            continue
+
+        if img.url:
+            saved = save_data_url_image(img.url, userDb.uid)
+            new_images.append({
+                "seq": img.seq if img.seq is not None else idx,
+                "deleted": False,
+                **saved
+            })
+        else:
+            # ถ้าไม่มี dataUrl และไม่ deleted → ข้าม หรือจะ error ก็ได้
+            # raise HTTPException(400, "image missing dataUrl")
+            pass
+
+        # เลือกพฤติกรรม:
+        # (A) replace ทั้ง images
+        if new_images:
+            userDb.images = new_images
+    
+    # userDb.admin = searchForm.admin
+    edit = await db["salepiev1"]["user"].update_one({"uid": currentUser.uid}, {'$set': userDb.model_dump() })
+    
+    print (f"edit >>> ",edit.modified_count)
+    
+    userOut = user.UserOut(**userDb.model_dump())
+
+
+    return{
+            "success": True,
+             "data": userOut
+           }
+
+
+
+# [u-3]
+@router.post("/delete-user/{userId}",  tags=["user"] )
+async def deleteUserInDomain( userId : str,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+    print(f"userId >>> ",userId)
+    try:
+        result  = await db["salepiev1"]["user"].delete_one({ "uid" : userId })
        
     except:
-        raise HTTPException(status_code=400, detail="Unable to delete user")
+        return{
+            "success": False,
+            "data": userOut
+        }
+    #     raise HTTPException(status_code=400, detail="Unable to delete user")
+    
+    return "OK" # {"deleted_count": result.deleted_count}
+
+# [u-2]
+@router.post("/soft-delete/{userId}",  tags=["user"] )
+async def deleteUserInDomain( userId : str,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+    # print(f"searchForm >>> ",userId)
+    row = await db["salepiev1"]["user"].find_one({ "uid" : userId })
+
+    if row is None:
+        raise HTTPException(status_code=404, detail="Not found user")
+
+    # try:
+    #     row = await db["salepiev1"]["user"].find_one({ "uid" : userId })
+    #     userDb =   user.UserDb(**row) 
+    # except:
+    #     raise HTTPException(status_code=400, detail="Not found user")
+    
+    userDb =   user.UserDb(**row) 
+    userDb.deleted = True
+
+    try:
+        edit = await db["salepiev1"]["user"].update_one({"uid": userId}, {'$set': userDb.dict() })
+
+        # print(f"edit >>> ",edit)
+       
+    except:
+        raise HTTPException(status_code=500, detail="Unable to delete user")
     
     return "OK" # {"deleted_count": result.deleted_count}
 
 
-@router.post("/add-user-in-domain/{domainId}",  tags=["user"])
-async def createUserInDomain( domainId: str, userCreate: user.UserCreate,  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+@router.post("/add-user-in-domain",  tags=["user"])
+async def createUserInDomain( domainId: str, userCreate: List[user.UserCreate],  db: AsyncIOMotorClient =  Depends(get_database),  currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
     # students = await retrieve_students()
     # students = StudentSchema()
     # students = await conn["alex_office_admin"]["movie"].find({})
-    userdb = await userRepo.getUserByEmail(db, userCreate.username)
-
-
-    if userdb:
-        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    # if userdb:
+    #     raise HTTPException(status_code=400, detail="Email already registered")
     
     
     # newuser = await userRepo.createUser(db=db, create=userCreate)
@@ -121,7 +308,7 @@ async def createUserInDomain( domainId: str, userCreate: user.UserCreate,  db: A
     dbuser.uid = util.getUuid()
     dbuser.hashedPassword = authRepo.get_password_hash(userCreate.password)
     dbuser.domainId = domainId
-    row = await db["ecouponv1"]["user"].insert_one(dbuser.dict())
+    row = await db["salepiev1"]["user"].insert_one(dbuser.dict())
    
     # if row:
     #     return Movie(**row)
@@ -139,12 +326,138 @@ async def register_user(reguser: user.UserCreate,  db: AsyncIOMotorClient =  Dep
 
     return userdb
 
+USER_IMAGE_URL = "http://localhost:8000/static/uploads/user"
+UPLOAD_ROOT = Path("static/uploads/user")
+ALLOWED = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
+MAX_IMAGE_BYTES = 5 * 1024 * 1024  # 5MB
+
+dataurl_re = re.compile(r"^data:(image\/(?:png|jpeg|webp));base64,(.+)$")
+
+def save_data_url_image(data_url: str, uid: str) -> dict:
+    m = dataurl_re.match(data_url or "")
+    if not m:
+        raise HTTPException(status_code=400, detail="Invalid image dataUrl")
+
+    content_type = m.group(1)
+    b64 = m.group(2)
+
+    raw = base64.b64decode(b64)
+    if len(raw) > MAX_IMAGE_BYTES:
+        raise HTTPException(status_code=400, detail="Image too large (max 5MB)")
+
+    user_dir = UPLOAD_ROOT / uid
+    user_dir.mkdir(parents=True, exist_ok=True)
+
+    ext = ALLOWED.get(content_type)
+    if not ext:
+        raise HTTPException(status_code=400, detail=f"Unsupported image type: {content_type}")
+
+    filename = f"staff_{uuid.uuid4().hex}{ext}"
+    path = user_dir / filename
+    path.write_bytes(raw)
+
+    return {
+        "getUrl" : f"{USER_IMAGE_URL}/{uid}/{filename}",
+        "path": str(path).replace("\\", "/"),
+        "filename": filename,
+        "contentType": content_type,
+        "size": len(raw),
+    }
 
 
+# [u-8] Edit my shop staff profile
+@router.post("/edit-staff-profile/{userId}",  tags=["user"] )
+async def editStaffProfile( 
+    userId : str, editForm : user.UserEditProfile,  
+    db: AsyncIOMotorClient =  Depends(get_database),  
+    currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
+    # print(f"editForm >>> ",editForm)
+
+    try:
+        row = await db["salepiev1"]["user"].find_one({ "domainId" : currentUser.domainId, "uid" : userId })
+        userDb =   user.UserDb(**row) 
+    except:
+        raise HTTPException(status_code=404, detail="Unable to get user")
+    
+    userDb.firstName = editForm.firstName
+    userDb.lastName  = editForm.lastName
+    userDb.address   = editForm.address
+    userDb.phone     = editForm.phone
+    userDb.isActive  = editForm.isActive
+    userDb.roles     = editForm.roles
+    userDb.status    = editForm.status
+    userDb.updateDateTime = datetime.now()
+
+    # ---- handle images array ----
+    new_images = []
+
+    for idx, img in enumerate(editForm.images or []):
+        print(f"IMAGE ::: for loop ")
+        # ถ้าส่ง deleted มา → เก็บสถานะไว้ (ตามโครงสร้างคุณ)
+        if img.deleted:
+            new_images.append({
+                "seq": img.seq if img.seq is not None else idx,
+                "deleted": True,
+            })
+            continue
+        print(f"IMAGE ::: ON data Url")
+        if img.dataUrl:
+            print(f"IMAGE ::: img.dataUrl comes")
+            # ✅✅ 1. เพิ่ม Logic: ลบไฟล์เก่าทั้งหมดในโฟลเดอร์ของ User นี้ทิ้งก่อน
+            user_dir = UPLOAD_ROOT / userDb.uid
+            
+            if user_dir.exists():
+                for file_path in user_dir.iterdir():
+                    if file_path.is_file():
+                        try:
+                            file_path.unlink() # ลบไฟล์
+                            print(f"Deleted old file: {file_path}")
+                        except Exception as e:
+                            print(f"Error deleting {file_path}: {e}")
+            
+            # ✅✅ 2. จากนั้นค่อยบันทึกไฟล์ใหม่
+            saved = save_data_url_image(img.dataUrl, userDb.uid)
+            print(f"* * * * *This is images {saved}")
+
+            new_images.append({
+                "seq": img.seq if img.seq is not None else idx,
+                "deleted": False,
+                **saved
+            })
+
+            print(f"\n\n\n\n🧮🧮🧮🧮 new_images >>> ",new_images)
+        elif not img.getUrl :
+            print(f"IMAGE ::: not img.getUrl")
+            # ถ้าไม่มี dataUrl และไม่ deleted → ข้าม หรือจะ error ก็ได้
+            # raise HTTPException(400, "image missing dataUrl")
+            print(f"I NEED TO DELETE !!!! {userDb.email}'s image")
+            userDb.images = []
+            break
+        print(f"IMAGE ::: End each loop")
+        # เลือกพฤติกรรม:
+        # (A) replace ทั้ง images
+        if new_images:
+            userDb.images = new_images
+
+    print(f"IMAGE ::: End ALL loop")
+    
+    
+    # userDb.admin = searchForm.admin
+    edit = await db["salepiev1"]["user"].update_one({"uid": userId}, {'$set': userDb.model_dump() })
+    
+    print (f"edit >>> ",edit.modified_count)
+    
+    userOut = user.UserOut(**userDb.model_dump())
 
 
-@router.post("/user",  tags=["user"])
-async def createUser( userCreate: user.UserCreate,  db: AsyncIOMotorClient =  Depends(get_database)):
+    return{
+            "success": True,
+             "data": userOut
+           }
+
+# [u-1]
+@router.post("/create-staff",  tags=["user"])
+async def createStaff( userCreate: user.UserCreate,  db: AsyncIOMotorClient =  Depends(get_database), currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)):
     # students = await retrieve_students()
     # students = StudentSchema()
     # students = await conn["alex_office_admin"]["movie"].find({})
@@ -154,8 +467,14 @@ async def createUser( userCreate: user.UserCreate,  db: AsyncIOMotorClient =  De
     if userdb:
         raise HTTPException(status_code=400, detail="Email already registered")
     
-    newuser = await userRepo.createUser(db=db, create=userCreate)
+    
+    newuser = await userRepo.createUserInTheSameDomain(db=db, create=userCreate, currentUser=currentUser)
+
+    userOut = user.UserOut(**newuser.model_dump())
    
+    return {"success": True,
+             "data": userOut
+           }
     # if row:
     #     return Movie(**row)
     
@@ -203,138 +522,6 @@ async def image(image: UploadFile = File(...)):
     
     return {"filename": image.filename}
 
-
-
-
-# @router.post("/uploadfiles/",  tags=["user"])
-# async def create_upload_files(files: List[UploadFile] = File(...), username: Optional[str] = "",  db: AsyncIOMotorClient =  Depends(get_database)):
-    
-#     userdb = await userRepo.getUserByEmail(db, username)
-#     if not userdb:
-#         raise HTTPException(status_code=400, detail="User not found") 
-    
-   
-    
-#     u = []
-    
-#     for file in files:
-#         new_guid = util.getUuid()
-#         tmp_file_name = file.filename.split(".")
-#         new_file_name = f"{new_guid}.{tmp_file_name[1]}"
-#         with open(f"assets/images/user/{new_file_name}", "wb") as buffer:
-#             shutil.copyfileobj(file.file, buffer)
-#         print(file)
-#         a = dict()
-#         a["id"] = new_guid
-#         a["name"] = f"{new_file_name}"
-#         # a["size"] = file.size
-        
-#         u.append(a)
-        
-#     print(u)
-     
-#     # **** UNCOMMENT!!!!! to save into database
-#     udb = await userRepo.updateImage(db=db, userdb=userdb, imageList=u )
-    
-#     view = user.UserView(**udb)
-        
-#     return view
-        
-        
-
-
-# @router.post("/upload-multiple-files",  tags=["user"])
-# async def upload_multiple_files(files: List[UploadFile] = File(...)):
-#     u = []
-
-    
-#     for file in files:
-#         print(f"file size>>> {len(file)}")
-
-#         new_guid = util.getUuid()
-#         tmp_file_name = file.filename.split(".")
-#         new_file_name = f"{new_guid}.{tmp_file_name[1]}"
-#         with open(f"assets/images/user/{new_file_name}", "wb") as buffer:
-#             shutil.copyfileobj(file.file, buffer)
-#         print(file)
-#         a = dict()
-#         a["id"] = new_guid
-#         a["name"] = f"{new_file_name}"
-#         # a["size"] = file.size
-        
-#         u.append(a)
-        
-#     print(f"assets/images/user/{new_file_name}")
-    
-
-        
-    # return view
-
-
-# conf = ConnectionConfig(
-#     MAIL_USERNAME=AlexEmail.MAIL_USERNAME,
-#     MAIL_PASSWORD=AlexEmail.MAIL_PASSWORD,
-#     MAIL_FROM=AlexEmail.MAIL_FROM,
-#     MAIL_PORT=AlexEmail.MAIL_PORT,
-#     MAIL_SERVER=AlexEmail.MAIL_SERVER,
-#     MAIL_FROM_NAME=AlexEmail.MAIL_FROM_NAME,
-#     MAIL_TLS = True,
-#     MAIL_SSL = False,
-#     USE_CREDENTIALS = True,
-#     VALIDATE_CERTS = True,
-#     TEMPLATE_FOLDER='templates'
-# )
-
-
-# @router.post("/send-email",  tags=["email"])
-# async def SendEmail(subject: str, email_to: str, body: str):
-#     message = MessageSchema(
-#         subject=subject,
-#         recipients=[email_to],
-#         body=body,
-#         subtype='html',
-#     )
-    
-#     html = """\
-#             <html>
-#                 <body style="margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">
-#                 <div style="width: 100%; background: #efefef; border-radius: 10px; padding: 10px;">
-#                 <div style="margin: 0 auto; width: 90%; text-align: center;">
-#                     <h1 style="background-color: rgba(0, 53, 102, 1); padding: 5px 10px; border-radius: 5px; color: white;">Subscription</h1>
-#                     <div style="margin: 30px auto; background: white; width: 40%; border-radius: 10px; padding: 50px; text-align: center;">
-#                     <h3 style="margin-bottom: 100px; font-size: 24px;">Bell</h3>
-#                     <p style="margin-bottom: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, doloremque.</p>
-#                     <a style="display: block; margin: 0 auto; border: none; background-color: rgba(255, 214, 10, 1); color: white; width: 200px; line-height: 24px; padding: 10px; font-size: 24px; border-radius: 10px; cursor: pointer; text-decoration: none;"
-#                         href="https://fastapi.tiangolo.com/"
-#                         target="_blank"
-#                     >
-#                         Let's Go
-#                     </a>
-#                     </div>
-#                 </div>
-#                 </div>
-#                 </body>
-#                 </html>
-#             """
-    
-#     fm = FastMail(conf)
-#     await fm.send_message(message, template_name='email.html')
-    
-#     return {"success": True}
-
-# @router.post("/send-email-with-bg",  tags=["email"])
-# def send_email_background(background_tasks: BackgroundTasks, subject: str, email_to: str, body: str):
-#     message = MessageSchema(
-#         subject=subject,
-#         recipients=[email_to],
-#         body=body,
-#         subtype='html',
-#     )
-#     fm = FastMail(conf)
-#     background_tasks.add_task(
-#        fm.send_message, message, template_name='email.html')
-    
-#     return {"success": True}
 
 
 @router.post("/send-email-text-template",  tags=["email"])

@@ -1089,7 +1089,7 @@ async def add_sms_credit(brandId: str , form: QtyForm ,  db: AsyncIOMotorClient 
         edit = await db["ecouponv1"]["brand"].update_one({ "uid" : brandId }, {'$set': updated.dict() })
         await db["ecouponv1"]["smsCreditLog"].insert_one(credit)
     except:
-        raise HTTPException(status_code=400, detail="Unable to save data to database")
+        raise HTTPException(status_code=402, detail="Unable to save data to database")
 
    
 #******************************************
@@ -1130,7 +1130,7 @@ async def cancel_coupon( cancelList : List[CouponCancelInput] ,db: AsyncIOMotorC
 async def brand_list(SearchForm: SearchForm,  db: AsyncIOMotorClient =  Depends(get_database), currentUser  : user.UserDb = Depends(authRepo.get_current_admin_user)):
    
     nameStr = f"{SearchForm.searchText}"
-    rows =    db["ecouponv1"]["brand"].find( { "$and" : [ { "$or" : [{ "name" :  {'$regex':nameStr , '$options' : 'i'} } ,  { "description" :  {'$regex':nameStr , '$options' : 'i'} }] } , 
+    rows =    db["ecouponv1"]["brand"].find( { "$and" : [ { "$or" : [{ "username" :  {'$regex':nameStr , '$options' : 'i'} } ,  { "description" :  {'$regex':nameStr , '$options' : 'i'} }] } , 
                                                           { "status" :  {'$regex':SearchForm.status  , '$options' : 'i'}  } 
                                                         ] 
                                              } ) 

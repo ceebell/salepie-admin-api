@@ -3,11 +3,30 @@ import os
 from dotenv import load_dotenv
 from starlette.datastructures import CommaSeparatedStrings, Secret
 from databases import DatabaseURL
+from pathlib import Path
+import re, base64, uuid
+
 
 API_V1_STR = "/api"
 
 ALEX_URL = "https://localhost:5001"
 # ALEX_URL = "https://demo002.alexrental.app"
+
+SALEPIE_URL = "https://localhost:8000"
+
+PRODUCT_IMAGE_URL = "/static/uploads/product"
+PRODUCT_UPLOAD_ROOT = Path("static/uploads/product")
+ALLOWED = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
+MAXIMUM_IMAGE_SIZE = 5  # MB
+MAX_IMAGE_BYTES = MAXIMUM_IMAGE_SIZE * 1024 * 1024  # 5MB
+ALLOWED_EXTENSIONS = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/gif": ".gif",
+    "image/webp": ".webp"
+}
+
+dataurl_re = re.compile(r"^data:(image\/(?:png|jpeg|webp));base64,(.+)$")
 
 
 ECOUPON_FILE_PATH = "assets/images/user/"
@@ -47,11 +66,11 @@ ALLOWED_HOSTS = CommaSeparatedStrings(os.getenv("ALLOWED_HOSTS", ""))
 
 MONGODB_URL = os.getenv("MONGODB_URL", "")  # deploying without docker-compose
 if not MONGODB_URL:
-    MONGO_HOST = os.getenv("MONGO_HOST", "165.22.98.55")
+    MONGO_HOST = os.getenv("MONGO_HOST", "127.0.0.1")
     MONGO_PORT = int(os.getenv("MONGO_PORT", 27017))
-    MONGO_USER = os.getenv("MONGO_USER", "ecoupon_admin")
-    MONGO_PASS = os.getenv("MONGO_PASSWORD", "eCoupon#Passw0rd#987=")
-    MONGO_DB = os.getenv("MONGO_DB", "ecouponv1")
+    MONGO_USER = os.getenv("MONGO_USER", "salepieadmin1")
+    MONGO_PASS = os.getenv("MONGO_PASSWORD", "S$alEpiead1!=InAProduct")
+    MONGO_DB = os.getenv("MONGO_DB", "salepiev1")
 
     MONGODB_URL = DatabaseURL(
         f"mongodb://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}:{MONGO_PORT}/{MONGO_DB}"

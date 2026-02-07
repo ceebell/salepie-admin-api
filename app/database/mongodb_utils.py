@@ -6,9 +6,10 @@ from .mongodb import db
 
 
 async def connect_to_mongo():
-    db.client = AsyncIOMotorClient(str(MONGODB_URL)
-                                 )
+    db.client = AsyncIOMotorClient(str(MONGODB_URL))
+    # print("✅ Connected to MongoDB")
 
 
 async def close_mongo_connection():
     db.client.close()
+    # print("❌ MongoDB connection closed")

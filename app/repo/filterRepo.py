@@ -46,7 +46,7 @@ import os
     
 #     return filtered
 
-# [V0.2]
+# [V0.3]
 def match_criteria(product: dict, criteria: dict) -> bool:
     """ ตรวจสอบว่าสินค้าตรงกับเงื่อนไขทั้งหมด """
     for key, values in criteria.items():
@@ -61,16 +61,19 @@ def match_criteria(product: dict, criteria: dict) -> bool:
             ):
                 return False
         else:  # ค้นหาตาม key อื่น ๆ เช่น color, size
-            if key in product:
-                product_value = product[key]
-                # ถ้าเป็น list เช่น ['red', 'blue'] ให้ตรวจสอบว่ามีค่าที่ตรงกัน
+            # กำจัด key ที่มี : เผื่อเจอ "color:" แบบผิด
+            product_keys = {k.rstrip(":"): v for k, v in product.items()}
+            if key in product_keys:
+                product_value = product_keys[key]
+
                 if isinstance(product_value, list):
                     if not any(str(v).lower() in [str(val).lower() for val in values] for v in product_value):
                         return False
-                # ถ้าเป็น string ให้ตรวจสอบโดยตรง
                 else:
                     if str(product_value).lower() not in [str(val).lower() for val in values]:
                         return False
+            else:
+                return False  # key ไม่พบเลยใน product
     return True
 
 

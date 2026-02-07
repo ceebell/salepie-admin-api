@@ -2,7 +2,8 @@ from typing import List, Optional
 import base64, string, random
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
-
+import secrets
+import string
 
 # from pymongo import MongoClient
 from bson.json_util import dumps
@@ -13,7 +14,7 @@ from jose import JWTError, jwt
 
 from pydantic import BaseModel, Json,Field, ValidationError, validator, EmailStr
 
-from fastapi import Depends, FastAPI, Cookie, HTTPException, APIRouter , Header , File, UploadFile
+from fastapi import Depends, FastAPI, Cookie, HTTPException, APIRouter , Header , File, UploadFile, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2, HTTPAuthorizationCredentials, HTTPBearer
 from fastapi.security.base import SecurityBase, SecurityBaseModel
@@ -95,11 +96,11 @@ class Token(BaseModel):
 
 
 class TokenData(BaseModel):
-    username: Optional[str] = None
+    email: Optional[str] = None
 
 class UserRegister(BaseModel):
     uid: str 
-    username: str
+    email: str
     password: str
     userType: Optional[str] = None 
     description: Optional[str] = None
@@ -107,7 +108,7 @@ class UserRegister(BaseModel):
     
 class SocialRegister(BaseModel):
     uid: str 
-    username: str
+    email: str
     userType: Optional[str] = None 
     description: Optional[str] = None
     active: bool = None
@@ -115,7 +116,7 @@ class SocialRegister(BaseModel):
 class UserIn(BaseModel):
     # uid: str  = Field(default_factory=str(uuid1))
     uid : str = None
-    username: EmailStr 
+    email: EmailStr 
     password: str
     description: Optional[str] = None
     createDateTime: datetime =  Field(default_factory=datetime.utcnow)
@@ -124,11 +125,11 @@ class UserIn(BaseModel):
 
 class UserUpdate(BaseModel):
     uid: str
-    username: EmailStr 
+    email: EmailStr 
     createDateTime: datetime
 
 class LoginForm(BaseModel):
-    username: EmailStr 
+    email: EmailStr 
     password: str
 
 
@@ -196,7 +197,14 @@ class OAuth2PasswordBearerCookie(OAuth2):
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/api_login")
+# oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/api_login")
+
+
+oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/auth/token")
+@router.post("/auth/token")
+async def token(form_data: OAuth2PasswordRequestForm = Depends()):
+    token = create_access_token(form_data.username)
+    return {"access_token": token, "token_type": "bearer"}
 # oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
@@ -214,6 +222,128 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 
+# --- Config (ควรดึงจาก env จริงๆ) ---
+SECRET_KEY = "dfe34d0177aa124604f5f85c722a49432be12405d554ccab73da50bcc991d03777b4747f90d4972190df8284c3be5c24d41c46443e03c79c4d73d5a1d7a164e1" # เปลี่ยนเป็น key ของคุณ
+ALGORITHM = "HS256"
+
+# ฟังก์ชันสร้าง Token
+def create_access_token(data: dict, expires_delta: timedelta = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        # ใช้ config ACCESS_TOKEN_EXPIRE_HOURS ที่คุณ import มา
+        expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS) 
+        
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+# [auth-1]
+# authentication endpoint: to get Cookie with Bearer token
+@router.post("/login")
+async def login_for_access_token(
+    response: Response, 
+    form_data: LoginForm, 
+    db: AsyncIOMotorClient = Depends(get_database)
+):
+    # 1. ค้นหา User จาก Database (ใช้ userRepo ที่คุณ import มา)
+    # สมมติว่า userRepo มีฟังก์ชัน get_user_by_email หรือ find_one
+    # คุณต้องปรับบรรทัดนี้ให้ตรงกับ function จริงใน repo ของคุณ
+    user_db = await userRepo.getUserByEmail(db, form_data.email) 
+
+    if not user_db:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+        )
+    
+    if not user_db.isActive:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="User is inactive",
+        )
+    
+    
+
+    # 2. ตรวจสอบ Password
+    # user_dict["password"] คือ hash ที่เก็บใน db
+    if not verify_password(form_data.password, user_db.hashedPassword):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+        )
+    
+    # สร้าง Nonce ยาว 16 ตัวอักษร (Alphanumeric)
+    alphabet = string.ascii_letters + string.digits
+    nonce = ''.join(secrets.choice(alphabet) for i in range(16))
+
+
+    # 3. สร้าง Access Token
+    access_token_expires = timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
+    access_token = create_access_token(
+        data={"sub": user_db.uid, "email" :user_db.email, "roles" : user_db.roles, "domain" : user_db.domainId, "nonce": nonce  }, # หรือใช้ uid ตามโครงสร้างของคุณ
+        expires_delta=access_token_expires
+    )
+
+    # user_db.createDateTime= user_db.createDateTime.strftime("%Y-%m-%d %H:%M:%S.%f")
+    # user_db.updateDateTime= user_db.updateDateTime.strftime("%Y-%m-%d %H:%M:%S.%f")
+    
+    
+    # 4. *** จุดสำคัญ: Set Cookie กลับไปที่ Nuxt ***
+    # Class OAuth2PasswordBearerCookie ของคุณเช็คว่า scheme == "bearer"
+    # ดังนั้น value ใน cookie ต้องเป็น "Bearer <token>"
+    
+    response.set_cookie(
+        key="Authorization",        # ชื่อ Cookie ต้องตรงกับที่ Class OAuth2PasswordBearerCookie ไป get มา
+        value=access_token, 
+        httponly=True,              # True เพื่อความปลอดภัย (JS อ่านไม่ได้)
+        max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
+        expires=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
+        samesite="Lax",             # ใช้ lax สำหรับเว็บทั่วไป
+        secure=False,  
+    )
+
+
+    # response.headers.append(
+    #     "Set-Cookie",
+    #     f"auth_backup=Bearer {access_token}; Path=/; HttpOnly; Max-Age=86400; SameSite=Lax; Expires={expires_str}"
+    # )
+
+    return {
+        "access_token": access_token, 
+        "token_type": "bearer"
+    }
+
+
+# [auth-2]
+# auth profile
+@router.post("/my-own-profile")
+async def get_user_own_profile(
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser  : user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    # 1. ค้นหา User จาก Database (ใช้ userRepo ที่คุณ import มา)
+    # สมมติว่า userRepo มีฟังก์ชัน get_user_by_email หรือ find_one
+    # คุณต้องปรับบรรทัดนี้ให้ตรงกับ function จริงใน repo ของคุณ
+    # user_db = await userRepo.getUserByEmail(db, form_data.email) 
+
+    userProfile = user.UserProfile(**currentUser.model_dump())
+
+
+  
+
+    return {
+        "success": True, 
+        "data": userProfile
+    }
+
+
+
+@router.post("/logout")
+async def logout(response: Response):
+    response.delete_cookie(key="Authorization")
+    return {"message": "Logout Successful"}
 
 
 def authenticate_user(username: str, password: str):
@@ -271,17 +401,17 @@ async def getAPILogin(request: Request):
 
 @router.get("/show_cookie",  tags=["auth"])
 async def getAPILogin(request: Request):
-    return request.cookies.get("user-session");
+    return request.cookies.get("user-session")
     
     
     
 @router.get("/get_api_login",  tags=["auth"])
 async def getAPILogin(db: AsyncIOMotorClient =  Depends(get_database) ):
         loginForm = LoginForm
-        loginForm.username = "testuser1@example.com"
+        loginForm.email = "testuser1@example.com"
         loginForm.password = 'password1'
         
-        userdb = await authRepo.authenticateUser(db=db, username=loginForm.username, password=loginForm.password)
+        userdb = await authRepo.authenticateUser(db=db, username=loginForm.email, password=loginForm.password)
    
    
         if userdb == "NO_USER" : 
@@ -298,14 +428,14 @@ async def getAPILogin(db: AsyncIOMotorClient =  Depends(get_database) ):
         access_token_expires = timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
         tokenExpiredAt = datetime.now() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
         access_token = create_access_token(
-            data={"sub": loginForm.username}, expires_delta=access_token_expires
+            data={"sub": loginForm.email}, expires_delta=access_token_expires
         )
 
         res = await userRepo.userResponse(db=db, userdb=userdb, activeToken=access_token, tokenExpiredAt=tokenExpiredAt)
 
         res['userData']["tokenExpiredAt"] = res['userData']["tokenExpiredAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-        res['userData']["createAt"] = res['userData']["createAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-        res['userData']["update_At"] = res['userData']["update_At"].strftime("%Y-%m-%d %H:%M:%S.%f")
+        res['userData']["createDateTime"] = res['userData']["createDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
+        res['userData']["updateDateTime"] = res['userData']["updateDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
 
         # print(res)
 
@@ -374,7 +504,7 @@ async def read_item( response:Response, response_type: Optional[str] , client_id
 @router.post("/api_login",  tags=["auth"])
 async def login_for_access_token(loginForm: LoginForm , db: AsyncIOMotorClient =  Depends(get_database) ):
  
-    userdb = await authRepo.authenticateUser(db=db, username=loginForm.username, password=loginForm.password)
+    userdb = await authRepo.authenticateUser(db=db, username=loginForm.email, password=loginForm.password)
    
     if userdb == "NO_USER" : 
         raise HTTPException(status_code=400, detail="This user is not registered")
@@ -390,7 +520,7 @@ async def login_for_access_token(loginForm: LoginForm , db: AsyncIOMotorClient =
     access_token_expires = timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
     tokenExpiredAt = datetime.now() + access_token_expires
     access_token = authRepo.create_access_token(
-        data={"sub": loginForm.username, "iss": "wtg.promo", "nonce": util.genRandomText(32) }, expires_delta=access_token_expires
+        data={"sub": loginForm.email, "iss": "wtg.promo", "nonce": util.genRandomText(32) }, expires_delta=access_token_expires
     )
 
     # print(f"access_token {access_token}")
@@ -399,8 +529,8 @@ async def login_for_access_token(loginForm: LoginForm , db: AsyncIOMotorClient =
 
 
     res['userData']["tokenExpiredAt"] = res['userData']["tokenExpiredAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-    res['userData']["createAt"] = res['userData']["createAt"].strftime("%Y-%m-%d %H:%M:%S.%f")
-    res['userData']["update_At"] = res['userData']["update_At"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    res['userData']["createDateTime"] = res['userData']["createDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
+    res['userData']["updateDateTime"] = res['userData']["updateDateTime"].strftime("%Y-%m-%d %H:%M:%S.%f")
   
 
 
@@ -439,6 +569,11 @@ async def getLogin():
     return response
 
 
+@router.get("/checkapi")
+async def check_api(token: str = Depends(oauth2_scheme)):
+    return {"msg": "You are authenticated", "token": token}
+
+
 
 
 
@@ -458,3 +593,20 @@ async def get_open_api_endpoint(currentUser: User = Depends(authRepo.get_current
 @router.get("/docs")
 async def get_documentation(currentUser: User = Depends(authRepo.get_current_active_user)):
     return get_swagger_ui_html(openapi_url="/openapi.json", title="docs")
+
+
+def decode_jwt(token: str):
+    try:
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+        return payload
+    except JWTError:
+        return None
+
+@router.get("/user/me")
+async def get_me(token: str = Depends(oauth2_scheme)):
+    payload = decode_jwt(token)
+    return payload
