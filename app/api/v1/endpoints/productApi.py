@@ -687,22 +687,160 @@ async def product_in_shop(
         "data": data_list,
     }
 
+ 
+# [เพิ่มในส่วน import]
+from models.product import AddProductToBranchReq, AddStockReq, StockDB, StockIn
+
+# ... (Existing code) ...
+
+# =========================================================
+# [pd-4-1-1] Add Product to Branch
+# =========================================================
+@router.post("/branch/add-product", tags=["product-stock"])
+async def add_product_to_branch(
+    req: AddProductToBranchReq,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    """
+    Assign a product to a specific branch with initial stock.
+    If the record exists, it might update or reject (here we assume upsert/set).
+    """
+    try:
+        current_time = now()
+        
+        # 1. Check if record already exists
+        existing_stock = await db["salepiev1"]["stock"].find_one({
+            "branchId": req.branchId,
+            "productId": req.productId,
+            "variantId": req.variantId,
+            "domainId": currentUser.domainId
+        })
+
+        if existing_stock:
+            # กรณีมีอยู่แล้ว อาจจะ Return Error หรือ Update ก็ได้ตาม Business Logic
+            # ในที่นี้สมมติว่าถ้ามีแล้วให้ Update ค่า inStock เป็นค่าใหม่เลย (Set)
+            await db["salepiev1"]["stock"].update_one(
+                {"_id": existing_stock["_id"]},
+                {
+                    "$set": {
+                        "inStock": req.inStock,
+                        "updateBy": currentUser.email,
+                        "updateDateTime": current_time
+                    }
+                }
+            )
+            result_uid = existing_stock["uid"]
+        else:
+            # 2. Create new Stock Record
+            new_stock = StockDB(
+                uid=util.getUuid(),
+                domainId=currentUser.domainId,
+                branchId=req.branchId,
+                productId=req.productId,
+                variantId=req.variantId,
+                inStock=req.inStock,
+                createBy=currentUser.email,
+                updateBy=currentUser.email,
+                createDateTime=current_time,
+                updateDateTime=current_time
+            )
+            
+            res = await db["salepiev1"]["stock"].insert_one(new_stock.model_dump())
+            result_uid = new_stock.uid
+
+        # 3. Retrieve latest data
+        updated_data = await db["salepiev1"]["stock"].find_one({"uid": result_uid})
+        if "_id" in updated_data: updated_data.pop("_id")
+
+        return {
+            "success": True,
+            "message": "Product added to branch successfully",
+            "data": updated_data
+        }
+
+    except Exception as e:
+        logger.error(f"Error adding product to branch: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
+# =========================================================
+# [pd-4-2-1] Add Product Stock
+# =========================================================
+@router.post("/stock/add", tags=["product-stock"])
+async def add_product_stock(
+    req: AddStockReq,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    """
+    Increase stock for a product in a branch.
+    """
+    try:
+        current_time = now()
 
+        # 1. Find existing Stock Record
+        stock_record = await db["salepiev1"]["stock"].find_one({
+            "branchId": req.branchId,
+            "productId": req.productId,
+            "variantId": req.variantId,
+            "domainId": currentUser.domainId
+        })
 
+        if not stock_record:
+            raise HTTPException(status_code=404, detail="Stock record not found in this branch")
 
+        # 2. Update Stock ($inc)
+        await db["salepiev1"]["stock"].update_one(
+            {"_id": stock_record["_id"]},
+            {
+                "$inc": {"inStock": req.qty},
+                "$set": {
+                    "updateBy": currentUser.email,
+                    "updateDateTime": current_time
+                }
+            }
+        )
 
+        # 3. (Optional) Log Transaction to StockIn Collection
+        # ควรเก็บ Log ว่ามีการเติมของเมื่อไหร่ จำนวนเท่าไหร่
+        log_entry = StockIn(
+            uid=util.getUuid(),
+            domainId=currentUser.domainId,
+            branchId=req.branchId,
+            productId=req.productId,
+            variantId=req.variantId,
+            description=req.description or "Add Stock via API",
+            inStock=req.qty, # จำนวนที่เติม
+            # createBy... (ถ้า Model รองรับ)
+        )
+        # หมายเหตุ: Model StockIn ใน product.py อาจต้องปรับให้มี field createBy/DateTime ถ้ายังไม่มี
+        # แต่จาก snippet มี createDateTime แล้ว
+        
+        # Inject user info manual if needed or use model defaults
+        log_data = log_entry.model_dump()
+        log_data.update({
+            "createBy": currentUser.email,
+            "createDateTime": current_time
+        })
+        
+        await db["salepiev1"]["stockIn"].insert_one(log_data)
 
+        # 4. Return Updated Data
+        updated_stock = await db["salepiev1"]["stock"].find_one({"_id": stock_record["_id"]})
+        if "_id" in updated_stock: updated_stock.pop("_id")
 
+        return {
+            "success": True,
+            "message": f"Stock increased by {req.qty}",
+            "data": updated_stock
+        }
 
-
-
-
-
-
-
-
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        logger.error(f"Error adding stock: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 

@@ -968,4 +968,19 @@ class BranchDB(BaseModel):
 
 
 
+# [เพิ่มต่อท้ายไฟล์ หรือในส่วน Product Stock Data Model]
 
+# Model สำหรับ Request การเพิ่มสินค้าเข้าสาขา [pd-4-1-1]
+class AddProductToBranchReq(BaseModel):
+    branchId: str
+    productId: str
+    variantId: Optional[str] = None
+    inStock: float = Field(default=0, ge=0) # เริ่มต้น stock เป็น 0 หรือค่าที่กำหนด
+
+# Model สำหรับ Request การเพิ่มจำนวนสต็อก [pd-4-2-1]
+class AddStockReq(BaseModel):
+    branchId: str
+    productId: str
+    variantId: Optional[str] = None
+    qty: float = Field(gt=0) # ต้องมากกว่า 0
+    description: Optional[str] = None

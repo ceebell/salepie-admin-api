@@ -972,42 +972,96 @@ async def test_product_in_shop_filtering(auth_client, db):
     # assert json_res["totalPages"] == 3
 
 
+# ==========================================
+# 🧪 TEST CASE: Stock & Branch Management
+# ==========================================
+@pytest.mark.asyncio
+async def test_pd_4_1_1_add_product_to_branch(auth_client: AsyncClient, db: AsyncIOMotorClient):
+    """
+    [pd-4-1-1] Test Add Product to Branch
+    - ตรวจสอบว่าสามารถสร้าง Stock Record เริ่มต้นให้กับสาขาได้
+    """
+    # 1. Setup Mock Data
+    mock_branch_id = f"branch-{util.getUuid()}"
+    mock_product_id = f"prod-{util.getUuid()}"
+    initial_stock = 10.0
+
+    payload = {
+        "branchId": mock_branch_id,
+        "productId": mock_product_id,
+        "variantId": None,
+        "inStock": initial_stock
+    }
+
+    # 2. Call API
+    response = await auth_client.post("/product/branch/add-product", json=payload)
+
+    # 3. Assert Response
+    assert response.status_code == 200
+    data = response.json()
+    assert data["success"] is True
+    assert data["data"]["branchId"] == mock_branch_id
+    assert data["data"]["inStock"] == initial_stock
+
+    # 4. Verify DB (Optional but recommended)
+    stock_in_db = await db["salepiev1"]["stock"].find_one({
+        "branchId": mock_branch_id,
+        "productId": mock_product_id
+    })
+    assert stock_in_db is not None
+    assert stock_in_db["inStock"] == initial_stock
+    
+    # Cleanup
+    await db["salepiev1"]["stock"].delete_one({"_id": stock_in_db["_id"]})
 
 
+@pytest.mark.asyncio
+async def test_pd_4_2_1_add_product_stock(auth_client: AsyncClient, db: AsyncIOMotorClient):
+    """
+    [pd-4-2-1] Test Add Product Stock
+    - ตรวจสอบว่าการเติม Stock ทำงานถูกต้อง (เพิ่มจากเดิม)
+    """
+    # 1. Setup Initial Data in DB
+    mock_branch_id = f"branch-{util.getUuid()}"
+    mock_product_id = f"prod-{util.getUuid()}"
+    initial_stock = 5.0
+    
+    # Insert initial record manually
+    initial_record = {
+        "uid": util.getUuid(),
+        "domainId": "test-domain",
+        "branchId": mock_branch_id,
+        "productId": mock_product_id,
+        "inStock": initial_stock,
+        "isActive": True
+    }
+    await db["salepiev1"]["stock"].insert_one(initial_record)
 
+    # 2. Prepare Request Payload to add more stock
+    add_qty = 20.0
+    payload = {
+        "branchId": mock_branch_id,
+        "productId": mock_product_id,
+        "qty": add_qty,
+        "description": "Restock new lot"
+    }
 
+    # 3. Call API
+    response = await auth_client.post("/product/stock/add", json=payload)
 
+    # 4. Assert Response
+    assert response.status_code == 200
+    data = response.json()
+    assert data["success"] is True
+    # Stock ใหม่ควรเป็น 5 + 20 = 25
+    assert data["data"]["inStock"] == initial_stock + add_qty
 
+    # 5. Verify DB
+    updated_stock = await db["salepiev1"]["stock"].find_one({
+        "branchId": mock_branch_id,
+        "productId": mock_product_id
+    })
+    assert updated_stock["inStock"] == initial_stock + add_qty
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Cleanup
+    await db["salepiev1"]["stock"].delete_many({"branchId": mock_branch_id})
