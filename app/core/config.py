@@ -67,7 +67,7 @@ ALLOWED_HOSTS = CommaSeparatedStrings(os.getenv("ALLOWED_HOSTS", ""))
 MONGODB_URL = os.getenv("MONGODB_URL", "")  # deploying without docker-compose
 if not MONGODB_URL:
     MONGO_HOST = os.getenv("MONGO_HOST", "127.0.0.1")
-    MONGO_PORT = int(os.getenv("MONGO_PORT", 27017))
+    MONGO_PORT = int(os.getenv("MONGO_PORT", 27019))
     MONGO_USER = os.getenv("MONGO_USER", "salepieadmin1")
     MONGO_PASS = os.getenv("MONGO_PASSWORD", "S$alEpiead1!=InAProduct")
     MONGO_DB = os.getenv("MONGO_DB", "salepiev1")

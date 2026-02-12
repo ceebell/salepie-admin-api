@@ -121,16 +121,23 @@ oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/token")
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
 
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+# def normalize_password(password: str) -> str:
+#     return hashlib.sha256(password.encode("utf-8")).hexdigest()
+
+# def verify_password(plain_password: str, hashed_password: str) -> bool:
+#     safe_password = normalize_password(plain_password)
+#     return pwd_context.verify(safe_password, hashed_password)
+
+# def get_password_hash(password: str) -> str:
+#     safe_password = password.encode("utf-8")[:72].decode("utf-8", errors="ignore")
+#     return pwd_context.hash(safe_password)
 
 
-def get_password_hash(password):
+def get_password_hash(password: str):
     return pwd_context.hash(password)
 
-
-
-    
+def verify_password(plain_password: str, hashed_password: str) -> bool:
+    return pwd_context.verify(plain_password, hashed_password)    
 
 
 

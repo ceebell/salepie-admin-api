@@ -4,7 +4,7 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta
 import secrets
 import string
-
+import hashlib
 # from pymongo import MongoClient
 from bson.json_util import dumps
 
@@ -26,7 +26,7 @@ from fastapi.openapi.utils import get_openapi
 from starlette.status import HTTP_403_FORBIDDEN
 from fastapi.responses import RedirectResponse, Response, JSONResponse
 from starlette.requests import Request
-
+import re
 from fastapi.middleware.cors import CORSMiddleware
 
 from core.config  import ACCESS_TOKEN_EXPIRE_HOURS
@@ -52,6 +52,10 @@ from fastapi.templating import Jinja2Templates
 
 
 from time import process_time, sleep
+
+import logging
+
+logger = logging.getLogger("salepie.auth")
 
 # from utils.database import SessionLocal, engine
 # schemas.Base.metadata.create_all(bind=engine)
@@ -213,14 +217,40 @@ app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 # templates = Jinja2Templates(directory="/templates")
 # app.mount("app/templates", StaticFiles(directory="templates"), name="templates")
 
+# def normalize_password(password: str) -> str:
+#     return hashlib.sha256(password.encode("utf-8")).hexdigest()
 
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+# def verify_password(plain_password: str, hashed_password: str) -> bool:
+#     safe_password = normalize_password(plain_password)
+#     return pwd_context.verify(safe_password, hashed_password)
 
 
-def get_password_hash(password):
+# def get_password_hash(password: str) -> str:
+#     safe_password = password.encode("utf-8")[:72].decode("utf-8", errors="ignore")
+#     return pwd_context.hash(safe_password)
+
+
+def get_password_hash(password: str):
     return pwd_context.hash(password)
 
+# def verify_password(plain_password: str, hashed_password: str) -> bool:
+#     return pwd_context.verify(plain_password, hashed_password)
+
+_sha256_re = re.compile(r"^[a-f0-9]{64}$", re.IGNORECASE)
+
+def verify_password(plain: str, stored_hash: str):
+    # bcrypt
+    if stored_hash.startswith("$2"):
+        return pwd_context.verify(plain, stored_hash), None
+
+    # legacy sha256
+    if _sha256_re.match(stored_hash or ""):
+        legacy = hashlib.sha256(plain.encode()).hexdigest()
+        if legacy == stored_hash:
+            return True, pwd_context.hash(plain)
+        return False, None
+
+    return False, None
 
 # --- Config (ควรดึงจาก env จริงๆ) ---
 SECRET_KEY = "dfe34d0177aa124604f5f85c722a49432be12405d554ccab73da50bcc991d03777b4747f90d4972190df8284c3be5c24d41c46443e03c79c4d73d5a1d7a164e1" # เปลี่ยนเป็น key ของคุณ
@@ -285,6 +315,8 @@ async def login_for_access_token(
         data={"sub": user_db.uid, "email" :user_db.email, "roles" : user_db.roles, "domain" : user_db.domainId, "nonce": nonce  }, # หรือใช้ uid ตามโครงสร้างของคุณ
         expires_delta=access_token_expires
     )
+
+    logger.info("Login attempt: %s", form_data.email)
 
     # user_db.createDateTime= user_db.createDateTime.strftime("%Y-%m-%d %H:%M:%S.%f")
     # user_db.updateDateTime= user_db.updateDateTime.strftime("%Y-%m-%d %H:%M:%S.%f")

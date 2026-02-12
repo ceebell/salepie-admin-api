@@ -32,9 +32,7 @@ from utils import util
 
 # from loguru import logger
 
-import logging
-from core.logging import setup_logging
-setup_logging(logging.INFO)
+
 
 from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer
@@ -52,6 +50,9 @@ from fastapi.middleware.cors import CORSMiddleware
 # from starlette.middleware.cors import CORSMiddleware
 
 from fastapi.responses import RedirectResponse
+
+from core.logging_config import setup_logging
+setup_logging()
 
 templates = Jinja2Templates(directory="./templates")
 
@@ -113,6 +114,8 @@ async def custom_validation_exception_handler(request: Request, exc: RequestVali
 
 
 
+
+
 # org = ["*"]
 # app.add_middleware(
 #     CORSMiddleware,
@@ -149,7 +152,7 @@ app.add_middleware(
 )
 
 # Logging zone
-logger = logging.getLogger("salepie")
+# logger = logging.getLogger("salepie")
 
 # *** MOTOR PYMONG
 app.add_event_handler("startup", connect_to_mongo)

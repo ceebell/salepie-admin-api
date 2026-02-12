@@ -9,39 +9,42 @@ import pydantic
 print(pydantic.VERSION)
 import json
 
-# @pytest.mark.asyncio
-# async def test_createUser_success(client):
+
+NEW_USER_ID = ""
+
+@pytest.mark.asyncio
+async def test_createUser_success(client):
     
-#     # [1. create user]
-#     user_data = {
-#         # "uid": "8b16f0cb-3ac2-4cc6-94e8-89ac120fb9b0",
-#         "email": "emily4@salepie.com",
-#         "firstName": "Emily",
-#         "lastName": "Johnson",
-#         "address": "123 Main St, Cityville",
-#         "phone": "123-456-7890",
-#         "roles": ["customer"], 
-#         "isActive": True,
-#         "deleted": False,
-#         "domainId": "domain123"
-#     }
+    # [1. create user]
+    user_data = {
+        # "uid": "8b16f0cb-3ac2-4cc6-94e8-89ac120fb9b0",
+        "email": "emily5@salepie.com",
+        "firstName": "Emily5",
+        "lastName": "Johnson",
+        "address": "123 Main St, Cityville",
+        "phone": "123-456-7890",
+        "roles": ["customer"], 
+        "isActive": True,
+        "deleted": False,
+        "domainId": "domain123"
+    }
 
-#     json_text = json.dumps(user_data)
+    json_text = json.dumps(user_data)
 
-#     print("\nCreating user with data:", type(json_text))
+    print("\nCreating user with data:", type(json_text))
 
-#     response = await client.post(
-#         "/user/create-staff",
-#         json=user_data
+    response = await client.post(
+        "/user/create-staff",
+        json=user_data
 
-#     )
+    )
 
-#     # # 3. ตรวจสอบผล
-#     assert response.status_code == 200
-#     # res_json = response.json()
-#     # assert "access_token" in res_json
+    # # 3. ตรวจสอบผล
+    assert response.status_code == 200
+    # res_json = response.json()
+    # assert "access_token" in res_json
     
-#     # print("\nLogin สำเร็จ! และเดี๋ยวข้อมูลจะถูกลบเองอัตโนมัติ")
+    # print("\nLogin สำเร็จ! และเดี๋ยวข้อมูลจะถูกลบเองอัตโนมัติ")
 
 
 # [2. create duplicated user]
@@ -52,12 +55,12 @@ async def test_createUser_duplicated(auth_client):
     theFalse = False
     # 2. ยิง API (ใช้ client ที่ conftest เตรียมมาให้)json=
     user_data = {
-        "email": "emily3@salepie.com",
-        "password": "Emily#2025",
-        "firstName": "Emily",
+        "email": "Arbigale@salepie.com",
+        "password": "Arbigale#2026",
+        "firstName": "Arbigale",
         "lastName": "Johnson",
         "address": "123 Main St, Cityville",
-        "phone": "123-456-7890",
+        "phone": "081-878-5645",
         "status": "active",
         "roles": ["customer"], 
         "isActive": theTrue,

@@ -1,0 +1,7 @@
+2026-02-12 09:43:21,780 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-12 10:07:50,981 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-12 10:07:50,983 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-12 10:07:51,482 | INFO | httpx | HTTP Request: POST http://test/user/create-staff "HTTP/1.1 200 OK"
+2026-02-12 10:08:24,129 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-12 10:08:24,130 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-12 10:08:24,630 | INFO | httpx | HTTP Request: POST http://test/user/create-staff "HTTP/1.1 400 Bad Request"
