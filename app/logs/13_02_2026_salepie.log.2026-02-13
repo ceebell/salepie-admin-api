@@ -1,0 +1,622 @@
+2026-02-13 00:31:27,621 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:31:27,625 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:31:27,626 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:31:27,838 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:31:27,839 | INFO | test.shop | ✅ Branch Created! UID: 9c23648b-63db-42d4-b78c-c2e20dce7a89
+2026-02-13 00:31:27,839 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:31:28,010 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:31:28,012 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:31:28,012 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 9c23648b-63db-42d4-b78c-c2e20dce7a89...
+2026-02-13 00:31:28,386 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/9c23648b-63db-42d4-b78c-c2e20dce7a89 "HTTP/1.1 200 OK"
+2026-02-13 00:31:28,507 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:31:28,507 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 9c23648b-63db-42d4-b78c-c2e20dce7a89...
+2026-02-13 00:31:28,721 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/9c23648b-63db-42d4-b78c-c2e20dce7a89 "HTTP/1.1 200 OK"
+2026-02-13 00:31:28,723 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:31:28,758 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:35:40,215 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:35:40,216 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:35:40,218 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:35:40,666 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:35:40,666 | INFO | test.shop | ✅ Branch Created! UID: 946428e2-afb8-4f91-b124-64aa64710411
+2026-02-13 00:35:40,666 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:35:41,027 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:35:41,027 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:35:41,027 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 946428e2-afb8-4f91-b124-64aa64710411...
+2026-02-13 00:35:41,738 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/946428e2-afb8-4f91-b124-64aa64710411 "HTTP/1.1 200 OK"
+2026-02-13 00:35:41,991 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:35:41,991 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 946428e2-afb8-4f91-b124-64aa64710411...
+2026-02-13 00:35:42,413 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/946428e2-afb8-4f91-b124-64aa64710411 "HTTP/1.1 200 OK"
+2026-02-13 00:35:42,414 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:35:42,498 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:37:15,639 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:37:15,640 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:37:15,641 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:37:15,942 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:37:15,943 | INFO | test.shop | ✅ Branch Created! UID: 0c79ce40-c403-4e2f-bf6f-b05b95efd608
+2026-02-13 00:37:15,943 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:37:16,080 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:37:16,081 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:37:16,081 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 0c79ce40-c403-4e2f-bf6f-b05b95efd608...
+2026-02-13 00:37:16,454 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/0c79ce40-c403-4e2f-bf6f-b05b95efd608 "HTTP/1.1 200 OK"
+2026-02-13 00:37:16,572 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:37:16,572 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 0c79ce40-c403-4e2f-bf6f-b05b95efd608...
+2026-02-13 00:37:16,789 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/0c79ce40-c403-4e2f-bf6f-b05b95efd608 "HTTP/1.1 200 OK"
+2026-02-13 00:37:16,789 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:37:16,829 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:38:53,808 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:38:53,808 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:38:53,812 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:38:54,031 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:38:54,032 | INFO | test.shop | ✅ Branch Created! UID: 16a1852b-ac3f-4215-b1aa-e485addfa74e
+2026-02-13 00:38:54,032 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:38:54,176 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:38:54,178 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:38:54,178 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 16a1852b-ac3f-4215-b1aa-e485addfa74e...
+2026-02-13 00:38:54,549 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/16a1852b-ac3f-4215-b1aa-e485addfa74e "HTTP/1.1 200 OK"
+2026-02-13 00:38:54,662 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:38:54,662 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 16a1852b-ac3f-4215-b1aa-e485addfa74e...
+2026-02-13 00:38:54,877 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/16a1852b-ac3f-4215-b1aa-e485addfa74e "HTTP/1.1 200 OK"
+2026-02-13 00:38:54,878 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:38:54,915 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:41:09,395 | INFO | root | ✅ Logging Setup Complete. Writing to: logs\13_02_2026_salepie.log
+2026-02-13 00:41:09,498 | INFO | root | ✅ Logging Setup Complete. Writing to: logs\13_02_2026_salepie.log
+2026-02-13 00:41:10,908 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:41:10,909 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:41:10,910 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:41:11,253 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:41:11,253 | INFO | test.shop | ✅ Branch Created! UID: 1d2d981c-cfb0-40d7-97d6-8df237e69be9
+2026-02-13 00:41:11,253 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:41:11,598 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:41:11,599 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:41:11,599 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 1d2d981c-cfb0-40d7-97d6-8df237e69be9...
+2026-02-13 00:41:12,353 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/1d2d981c-cfb0-40d7-97d6-8df237e69be9 "HTTP/1.1 200 OK"
+2026-02-13 00:41:12,450 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:41:12,451 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 1d2d981c-cfb0-40d7-97d6-8df237e69be9...
+2026-02-13 00:41:12,671 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/1d2d981c-cfb0-40d7-97d6-8df237e69be9 "HTTP/1.1 200 OK"
+2026-02-13 00:41:12,672 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:41:12,710 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:44:07,490 | INFO | root | ✅ Logging Setup Complete. Writing to: logs\13_02_2026_salepie.log
+2026-02-13 00:44:07,609 | INFO | root | ✅ Logging Setup Complete. Writing to: logs\13_02_2026_salepie.log
+2026-02-13 00:44:08,283 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:44:08,285 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:44:08,287 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:44:08,503 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:44:08,504 | INFO | test.shop | ✅ Branch Created! UID: e1d40663-7d57-470a-999c-d290cb81736f
+2026-02-13 00:44:08,504 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:44:08,617 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:44:08,618 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:44:08,618 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch e1d40663-7d57-470a-999c-d290cb81736f...
+2026-02-13 00:44:09,037 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/e1d40663-7d57-470a-999c-d290cb81736f "HTTP/1.1 200 OK"
+2026-02-13 00:44:09,175 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:44:09,177 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch e1d40663-7d57-470a-999c-d290cb81736f...
+2026-02-13 00:44:09,585 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/e1d40663-7d57-470a-999c-d290cb81736f "HTTP/1.1 200 OK"
+2026-02-13 00:44:09,585 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:44:09,647 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:48:04,888 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:48:04,888 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:48:04,891 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:48:05,073 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:48:05,073 | INFO | test.shop | ✅ Branch Created! UID: 11cde8cf-f86a-4dfb-aea8-0c26a8639d14
+2026-02-13 00:48:05,075 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:48:05,220 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:48:05,220 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:48:05,221 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 11cde8cf-f86a-4dfb-aea8-0c26a8639d14...
+2026-02-13 00:48:05,591 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/11cde8cf-f86a-4dfb-aea8-0c26a8639d14 "HTTP/1.1 200 OK"
+2026-02-13 00:48:05,678 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:48:05,678 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 11cde8cf-f86a-4dfb-aea8-0c26a8639d14...
+2026-02-13 00:48:06,008 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/11cde8cf-f86a-4dfb-aea8-0c26a8639d14 "HTTP/1.1 200 OK"
+2026-02-13 00:48:06,008 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:48:06,077 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:50:24,088 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:50:24,089 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:50:57,320 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:50:57,321 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:50:57,323 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:50:57,524 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:50:57,525 | INFO | test.shop | ✅ Branch Created! UID: b94ba4f8-0dc9-4f55-87ee-67600c7ab2d4
+2026-02-13 00:50:57,526 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:50:57,664 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:50:57,666 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:50:57,666 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch b94ba4f8-0dc9-4f55-87ee-67600c7ab2d4...
+2026-02-13 00:50:58,043 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/b94ba4f8-0dc9-4f55-87ee-67600c7ab2d4 "HTTP/1.1 200 OK"
+2026-02-13 00:50:58,133 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:50:58,133 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch b94ba4f8-0dc9-4f55-87ee-67600c7ab2d4...
+2026-02-13 00:50:58,377 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/b94ba4f8-0dc9-4f55-87ee-67600c7ab2d4 "HTTP/1.1 200 OK"
+2026-02-13 00:50:58,378 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:50:58,415 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 00:55:58,744 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 00:55:58,746 | INFO | httpx | HTTP Request: POST http://test/auth/login "HTTP/1.1 200 OK"
+2026-02-13 00:55:58,747 | INFO | test.shop | 
+🚀 [Step 1] Creating Branch...
+2026-02-13 00:55:59,019 | INFO | salepie.shop | A new Branch was saved
+2026-02-13 00:55:59,020 | INFO | httpx | HTTP Request: POST http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:55:59,020 | INFO | test.shop | ✅ Branch Created! UID: 86d7da82-37c5-4732-b2e2-adf06c8efad3
+2026-02-13 00:55:59,021 | INFO | test.shop | 
+🚀 [Step 2] Listing Branches...
+2026-02-13 00:55:59,149 | INFO | salepie.shop | Calling branch list
+2026-02-13 00:55:59,150 | INFO | httpx | HTTP Request: GET http://test/shop/branch "HTTP/1.1 200 OK"
+2026-02-13 00:55:59,150 | INFO | test.shop | ✅ Found created branch in list.
+2026-02-13 00:55:59,151 | INFO | test.shop | 
+🚀 [Step 3] Updating Branch 86d7da82-37c5-4732-b2e2-adf06c8efad3...
+2026-02-13 00:55:59,623 | INFO | httpx | HTTP Request: PUT http://test/shop/branch/86d7da82-37c5-4732-b2e2-adf06c8efad3 "HTTP/1.1 200 OK"
+2026-02-13 00:55:59,816 | INFO | test.shop | ✅ Update successful and verified in DB.
+2026-02-13 00:55:59,816 | INFO | test.shop | 
+🚀 [Step 4] Deleting Branch 86d7da82-37c5-4732-b2e2-adf06c8efad3...
+2026-02-13 00:56:00,351 | INFO | httpx | HTTP Request: DELETE http://test/shop/branch/86d7da82-37c5-4732-b2e2-adf06c8efad3 "HTTP/1.1 200 OK"
+2026-02-13 00:56:00,352 | INFO | test.shop | 
+🕵️‍♂️ [Step 5] Verifying Soft Delete in DB...
+2026-02-13 00:56:00,414 | INFO | test.shop | ✅ Branch soft deleted successfully.
+2026-02-13 21:37:30,482 | INFO | uvicorn.error | Started server process [35736]
+2026-02-13 21:37:30,482 | INFO | uvicorn.error | Waiting for application startup.
+2026-02-13 21:37:30,505 | INFO | uvicorn.error | Application startup complete.
+2026-02-13 21:41:01,979 | INFO | uvicorn.access | 127.0.0.1:58353 - "GET /favicon.ico HTTP/1.1" 404
+2026-02-13 22:15:47,898 | INFO | uvicorn.access | 127.0.0.1:50500 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:15:47,900 | INFO | uvicorn.access | 127.0.0.1:50501 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:16:13,363 | INFO | uvicorn.access | 127.0.0.1:63592 - "OPTIONS /auth/login HTTP/1.1" 200
+2026-02-13 22:16:26,771 | INFO | uvicorn.access | 127.0.0.1:57014 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:16:35,110 | INFO | uvicorn.access | 127.0.0.1:58195 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-13 22:16:43,779 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\api\v1\endpoints\authApi.py", line 283, in login_for_access_token
+    user_db = await userRepo.getUserByEmail(db, form_data.email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 698f372a222f9654429f4470, topology_type: Unknown, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-13 22:17:15,524 | INFO | uvicorn.access | 127.0.0.1:61465 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-13 22:17:15,623 | INFO | uvicorn.access | 127.0.0.1:61465 - "GET /favicon.ico HTTP/1.1" 404
+2026-02-13 22:17:31,261 | INFO | uvicorn.access | 127.0.0.1:63710 - "OPTIONS /auth/login HTTP/1.1" 200
+2026-02-13 22:18:01,465 | INFO | uvicorn.access | 127.0.0.1:62411 - "POST /auth/login HTTP/1.1" 500
+2026-02-13 22:18:01,465 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\api\v1\endpoints\authApi.py", line 283, in login_for_access_token
+    user_db = await userRepo.getUserByEmail(db, form_data.email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 698f372a222f9654429f4470, topology_type: Unknown, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-13 22:18:13,442 | INFO | uvicorn.access | 127.0.0.1:57304 - "OPTIONS /auth/login HTTP/1.1" 200
+2026-02-13 22:18:14,994 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-13 22:18:14,995 | INFO | uvicorn.access | 127.0.0.1:64479 - "POST /auth/login HTTP/1.1" 200
+2026-02-13 22:18:26,616 | INFO | uvicorn.access | 127.0.0.1:54989 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:18:27,165 | INFO | uvicorn.access | 127.0.0.1:51003 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:18:27,166 | INFO | uvicorn.access | 127.0.0.1:64508 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:18:27,166 | INFO | uvicorn.access | 127.0.0.1:58598 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:18:38,406 | INFO | uvicorn.access | 127.0.0.1:55526 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:18:38,784 | INFO | uvicorn.access | 127.0.0.1:52429 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:18:38,791 | INFO | uvicorn.access | 127.0.0.1:52429 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:18:38,796 | INFO | uvicorn.access | 127.0.0.1:52429 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:19:00,094 | INFO | uvicorn.access | 127.0.0.1:56018 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:00,562 | INFO | uvicorn.access | 127.0.0.1:60312 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:19:00,563 | INFO | uvicorn.access | 127.0.0.1:57706 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:19:00,569 | INFO | uvicorn.access | 127.0.0.1:60312 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:19:15,558 | INFO | uvicorn.access | 127.0.0.1:58716 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:18,891 | INFO | uvicorn.access | 127.0.0.1:52480 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:19:18,896 | INFO | uvicorn.access | 127.0.0.1:52480 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:19:18,901 | INFO | uvicorn.access | 127.0.0.1:52480 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:19:18,974 | INFO | uvicorn.access | 127.0.0.1:58716 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:35,378 | INFO | uvicorn.access | 127.0.0.1:52969 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:40,111 | INFO | uvicorn.access | 127.0.0.1:52969 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:42,573 | INFO | uvicorn.access | 127.0.0.1:52620 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:19:42,745 | INFO | uvicorn.access | 127.0.0.1:52620 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:19:43,371 | INFO | uvicorn.access | 127.0.0.1:52969 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:46,333 | INFO | uvicorn.access | 127.0.0.1:52620 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:19:46,347 | INFO | uvicorn.access | 127.0.0.1:52620 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:19:46,497 | INFO | uvicorn.access | 127.0.0.1:52620 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:19:51,239 | INFO | uvicorn.access | 127.0.0.1:55564 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:19:59,965 | INFO | uvicorn.access | 127.0.0.1:63526 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:19:59,975 | INFO | uvicorn.access | 127.0.0.1:63526 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:19:59,991 | INFO | uvicorn.access | 127.0.0.1:63526 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:20:13,176 | INFO | uvicorn.access | 127.0.0.1:59800 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:20:14,296 | INFO | uvicorn.access | 127.0.0.1:59721 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:20:14,297 | INFO | uvicorn.access | 127.0.0.1:50573 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:20:14,308 | INFO | uvicorn.access | 127.0.0.1:59721 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:30:49,044 | INFO | uvicorn.access | 127.0.0.1:54848 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:30:49,554 | INFO | uvicorn.access | 127.0.0.1:60883 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:30:49,555 | INFO | uvicorn.access | 127.0.0.1:63946 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:30:49,555 | INFO | uvicorn.access | 127.0.0.1:51455 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:06,614 | INFO | uvicorn.access | 127.0.0.1:61907 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:06,815 | INFO | uvicorn.access | 127.0.0.1:61706 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:06,845 | INFO | uvicorn.access | 127.0.0.1:61706 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:06,850 | INFO | uvicorn.access | 127.0.0.1:61706 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:18,452 | INFO | uvicorn.access | 127.0.0.1:58283 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:18,644 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:18,645 | INFO | uvicorn.access | 127.0.0.1:62491 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:18,650 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:19,045 | INFO | uvicorn.access | 127.0.0.1:58283 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:21,279 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:21,292 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:21,416 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:22,071 | INFO | uvicorn.access | 127.0.0.1:58283 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:24,232 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:24,270 | INFO | uvicorn.access | 127.0.0.1:59631 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:24,270 | INFO | uvicorn.access | 127.0.0.1:59899 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:25,196 | INFO | uvicorn.access | 127.0.0.1:58283 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:29,653 | INFO | uvicorn.access | 127.0.0.1:58776 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:29,654 | INFO | uvicorn.access | 127.0.0.1:62286 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:36,012 | INFO | uvicorn.access | 127.0.0.1:56321 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=sale&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:43,935 | INFO | uvicorn.access | 127.0.0.1:56289 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:31:44,204 | INFO | uvicorn.access | 127.0.0.1:56289 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:44,209 | INFO | uvicorn.access | 127.0.0.1:56289 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:44,869 | INFO | uvicorn.access | 127.0.0.1:50203 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:31:57,009 | INFO | uvicorn.access | 127.0.0.1:55499 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:31:57,014 | INFO | uvicorn.access | 127.0.0.1:55499 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:31:57,018 | INFO | uvicorn.access | 127.0.0.1:55499 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:40:43,791 | INFO | uvicorn.access | 127.0.0.1:57490 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:54,579 | INFO | uvicorn.access | 127.0.0.1:58912 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:56,757 | INFO | uvicorn.access | 127.0.0.1:58912 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:57,849 | INFO | uvicorn.access | 127.0.0.1:58912 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:58,391 | INFO | uvicorn.access | 127.0.0.1:58912 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:59,494 | INFO | uvicorn.access | 127.0.0.1:58912 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:40:59,855 | INFO | uvicorn.access | 127.0.0.1:50061 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:01,402 | INFO | uvicorn.access | 127.0.0.1:50061 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:04,082 | INFO | uvicorn.access | 127.0.0.1:50061 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:04,875 | INFO | uvicorn.access | 127.0.0.1:50061 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:36,223 | INFO | uvicorn.access | 127.0.0.1:63624 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:38,057 | INFO | uvicorn.access | 127.0.0.1:56610 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:41:38,058 | INFO | uvicorn.access | 127.0.0.1:60275 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:41:38,058 | INFO | uvicorn.access | 127.0.0.1:52081 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:41:39,627 | INFO | uvicorn.access | 127.0.0.1:63624 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:42,945 | INFO | uvicorn.access | 127.0.0.1:52081 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:41:43,029 | INFO | uvicorn.access | 127.0.0.1:63624 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:41:43,057 | INFO | uvicorn.access | 127.0.0.1:52081 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:41:43,067 | INFO | uvicorn.access | 127.0.0.1:52081 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:43:34,716 | INFO | uvicorn.access | 127.0.0.1:62681 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:43:54,353 | INFO | uvicorn.access | 127.0.0.1:59935 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:43:59,226 | INFO | uvicorn.access | 127.0.0.1:59935 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:00,492 | INFO | uvicorn.access | 127.0.0.1:59935 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:12,371 | INFO | uvicorn.access | 127.0.0.1:62616 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:13,725 | INFO | uvicorn.access | 127.0.0.1:58921 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:44:14,500 | INFO | uvicorn.access | 127.0.0.1:62616 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:17,627 | INFO | uvicorn.access | 127.0.0.1:58921 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:44:17,899 | INFO | uvicorn.access | 127.0.0.1:58921 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:44:19,225 | INFO | uvicorn.access | 127.0.0.1:62616 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=admin&roles=manager&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:25,238 | INFO | uvicorn.access | 127.0.0.1:65339 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:44:25,251 | INFO | uvicorn.access | 127.0.0.1:65339 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:44:25,530 | INFO | uvicorn.access | 127.0.0.1:65339 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:44:25,855 | INFO | uvicorn.access | 127.0.0.1:55059 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=sale&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:26,161 | INFO | uvicorn.access | 127.0.0.1:65524 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=sale&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:44:38,547 | INFO | uvicorn.access | 127.0.0.1:64958 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:44:38,553 | INFO | uvicorn.access | 127.0.0.1:54118 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:44:38,557 | INFO | uvicorn.access | 127.0.0.1:64958 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:32,576 | INFO | uvicorn.access | 127.0.0.1:51000 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:33,037 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:52:33,038 | INFO | uvicorn.access | 127.0.0.1:49954 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:52:33,038 | INFO | uvicorn.access | 127.0.0.1:58369 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:37,187 | INFO | uvicorn.access | 127.0.0.1:51000 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=owner&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:37,483 | INFO | uvicorn.access | 127.0.0.1:49954 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:52:37,483 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:37,485 | INFO | uvicorn.access | 127.0.0.1:58369 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:52:38,596 | INFO | uvicorn.access | 127.0.0.1:51000 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:39,566 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:41,015 | INFO | uvicorn.access | 127.0.0.1:51000 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:43,175 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:43,314 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:52:43,321 | INFO | uvicorn.access | 127.0.0.1:63974 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:52:44,648 | INFO | uvicorn.access | 127.0.0.1:51000 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:51,248 | INFO | uvicorn.access | 127.0.0.1:55675 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:52:51,259 | INFO | uvicorn.access | 127.0.0.1:55675 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:52:51,294 | INFO | uvicorn.access | 127.0.0.1:60092 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:52:51,653 | INFO | uvicorn.access | 127.0.0.1:55675 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:52:52,261 | INFO | uvicorn.access | 127.0.0.1:60092 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:53:03,657 | INFO | uvicorn.access | 127.0.0.1:60419 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:53:03,662 | INFO | uvicorn.access | 127.0.0.1:60419 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:53:05,275 | INFO | uvicorn.access | 127.0.0.1:52592 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:53:05,330 | INFO | uvicorn.access | 127.0.0.1:60419 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:53:05,342 | INFO | uvicorn.access | 127.0.0.1:60419 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:55:06,628 | INFO | uvicorn.access | 127.0.0.1:60149 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:55:07,095 | INFO | uvicorn.access | 127.0.0.1:52371 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:55:07,096 | INFO | uvicorn.access | 127.0.0.1:59153 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:55:07,097 | INFO | uvicorn.access | 127.0.0.1:53000 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:55:13,188 | INFO | uvicorn.access | 127.0.0.1:59315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:55:13,417 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:55:13,427 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 22:55:13,444 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:55:13,927 | INFO | uvicorn.access | 127.0.0.1:59315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:55:14,288 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:55:14,414 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:55:16,064 | INFO | uvicorn.access | 127.0.0.1:59315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:55:18,767 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:55:18,779 | INFO | uvicorn.access | 127.0.0.1:54430 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 22:55:19,493 | INFO | uvicorn.access | 127.0.0.1:59315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&roles=manager&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 22:55:24,531 | INFO | uvicorn.access | 127.0.0.1:55430 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 22:55:24,536 | INFO | uvicorn.access | 127.0.0.1:55430 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:02:45,291 | INFO | uvicorn.access | 127.0.0.1:59932 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:02:58,272 | INFO | uvicorn.access | 127.0.0.1:52787 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:02:58,279 | INFO | uvicorn.access | 127.0.0.1:63768 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:02:58,280 | INFO | uvicorn.access | 127.0.0.1:54193 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:03:20,714 | INFO | uvicorn.access | 127.0.0.1:56017 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:03:31,179 | INFO | uvicorn.access | 127.0.0.1:54641 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:03:31,183 | INFO | uvicorn.access | 127.0.0.1:54641 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:03:31,200 | INFO | uvicorn.access | 127.0.0.1:54641 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:03:35,582 | INFO | uvicorn.access | 127.0.0.1:54899 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:03:35,814 | INFO | uvicorn.access | 127.0.0.1:54641 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:03:35,815 | INFO | uvicorn.access | 127.0.0.1:49673 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:03:35,820 | INFO | uvicorn.access | 127.0.0.1:54641 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:04:46,645 | INFO | uvicorn.access | 127.0.0.1:61997 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:04:47,909 | INFO | uvicorn.access | 127.0.0.1:64701 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:04:47,916 | INFO | uvicorn.access | 127.0.0.1:63802 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:04:47,943 | INFO | uvicorn.access | 127.0.0.1:64452 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:04:48,950 | INFO | uvicorn.access | 127.0.0.1:61997 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:04:50,122 | INFO | uvicorn.access | 127.0.0.1:64452 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:04:50,135 | INFO | uvicorn.access | 127.0.0.1:63802 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:04:50,158 | INFO | uvicorn.access | 127.0.0.1:63802 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:04:57,743 | INFO | uvicorn.access | 127.0.0.1:62800 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:00,571 | INFO | uvicorn.access | 127.0.0.1:55092 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:05:00,662 | INFO | uvicorn.access | 127.0.0.1:55092 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:05:00,706 | INFO | uvicorn.access | 127.0.0.1:55092 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:05:11,859 | INFO | uvicorn.access | 127.0.0.1:53965 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:13,648 | INFO | uvicorn.access | 127.0.0.1:51984 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:05:14,640 | INFO | uvicorn.access | 127.0.0.1:53965 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:17,816 | INFO | uvicorn.access | 127.0.0.1:51984 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:05:17,976 | INFO | uvicorn.access | 127.0.0.1:53965 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:19,351 | INFO | uvicorn.access | 127.0.0.1:53965 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:22,330 | INFO | uvicorn.access | 127.0.0.1:51984 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:05:23,143 | INFO | uvicorn.access | 127.0.0.1:53965 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:05:27,328 | INFO | uvicorn.access | 127.0.0.1:51984 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:05:27,684 | INFO | uvicorn.access | 127.0.0.1:51984 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:05:27,685 | INFO | uvicorn.access | 127.0.0.1:55333 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:06:11,571 | INFO | uvicorn.access | 127.0.0.1:64002 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:06:21,273 | INFO | uvicorn.access | 127.0.0.1:56466 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:06:21,274 | INFO | uvicorn.access | 127.0.0.1:63182 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:06:21,275 | INFO | uvicorn.access | 127.0.0.1:57182 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:14:14,853 | INFO | uvicorn.access | 127.0.0.1:52684 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:14:15,346 | INFO | uvicorn.access | 127.0.0.1:57896 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:14:15,347 | INFO | uvicorn.access | 127.0.0.1:62937 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:14:15,348 | INFO | uvicorn.access | 127.0.0.1:57750 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:14:21,179 | INFO | uvicorn.access | 127.0.0.1:59321 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:14:21,194 | INFO | uvicorn.access | 127.0.0.1:65513 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:14:21,224 | INFO | uvicorn.access | 127.0.0.1:65513 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:14:21,228 | INFO | uvicorn.access | 127.0.0.1:65513 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:14:27,686 | INFO | uvicorn.access | 127.0.0.1:63427 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:14:28,755 | INFO | uvicorn.access | 127.0.0.1:61215 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:14:28,768 | INFO | uvicorn.access | 127.0.0.1:61215 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:14:28,982 | INFO | uvicorn.access | 127.0.0.1:61215 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:14:38,106 | INFO | uvicorn.access | 127.0.0.1:57122 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:14:41,105 | INFO | uvicorn.access | 127.0.0.1:63494 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:14:41,109 | INFO | uvicorn.access | 127.0.0.1:63494 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:14:41,115 | INFO | uvicorn.access | 127.0.0.1:63494 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:15:19,375 | INFO | uvicorn.access | 127.0.0.1:56269 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:15:25,329 | INFO | uvicorn.access | 127.0.0.1:52253 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:15:25,346 | INFO | uvicorn.access | 127.0.0.1:52253 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:15:25,356 | INFO | uvicorn.access | 127.0.0.1:52253 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:15:30,151 | INFO | uvicorn.access | 127.0.0.1:55277 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=staff&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:15:39,925 | INFO | uvicorn.access | 127.0.0.1:49671 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:15:39,926 | INFO | uvicorn.access | 127.0.0.1:61799 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:15:52,824 | INFO | uvicorn.access | 127.0.0.1:53941 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:16:12,351 | INFO | uvicorn.access | 127.0.0.1:59292 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:16:12,352 | INFO | uvicorn.access | 127.0.0.1:58210 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:16:12,352 | INFO | uvicorn.access | 127.0.0.1:50116 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:16:12,699 | INFO | uvicorn.access | 127.0.0.1:50796 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:19:09,919 | INFO | uvicorn.access | 127.0.0.1:58134 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:19:09,920 | INFO | uvicorn.access | 127.0.0.1:51896 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:28:57,937 | INFO | uvicorn.access | 127.0.0.1:54043 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:28:58,285 | INFO | uvicorn.access | 127.0.0.1:54043 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:07,464 | INFO | uvicorn.access | 127.0.0.1:60120 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:12,748 | INFO | uvicorn.access | 127.0.0.1:60120 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:16,292 | INFO | uvicorn.access | 127.0.0.1:60120 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:19,558 | INFO | uvicorn.access | 127.0.0.1:60120 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:19,805 | INFO | uvicorn.access | 127.0.0.1:60120 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:37,966 | INFO | uvicorn.access | 127.0.0.1:57820 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:40,021 | INFO | uvicorn.access | 127.0.0.1:57820 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:43,713 | INFO | uvicorn.access | 127.0.0.1:57820 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:51,923 | INFO | uvicorn.access | 127.0.0.1:57066 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=manager&roles=admin&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:29:53,945 | INFO | uvicorn.access | 127.0.0.1:57066 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=manager&roles=admin&roles=sale&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:31:55,708 | INFO | uvicorn.access | 127.0.0.1:58065 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=sale&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:19,838 | INFO | uvicorn.access | 127.0.0.1:50234 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=staff&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:25,506 | INFO | uvicorn.access | 127.0.0.1:50234 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:27,414 | INFO | uvicorn.access | 127.0.0.1:50234 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:35,030 | INFO | uvicorn.access | 127.0.0.1:65252 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:37,009 | INFO | uvicorn.access | 127.0.0.1:65252 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:32:45,320 | INFO | uvicorn.access | 127.0.0.1:62815 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:12,291 | INFO | uvicorn.access | 127.0.0.1:49671 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:12,532 | INFO | uvicorn.access | 127.0.0.1:49671 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:21,277 | INFO | uvicorn.access | 127.0.0.1:61990 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=owner&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:24,535 | INFO | uvicorn.access | 127.0.0.1:61990 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:27,551 | INFO | uvicorn.access | 127.0.0.1:61990 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=sale&roles=admin&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:41,702 | INFO | uvicorn.access | 127.0.0.1:51817 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:41,867 | INFO | uvicorn.access | 127.0.0.1:63275 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:37:59,781 | INFO | uvicorn.access | 127.0.0.1:50557 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:38:00,760 | INFO | uvicorn.access | 127.0.0.1:54513 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-13 23:38:00,761 | INFO | uvicorn.access | 127.0.0.1:59633 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:38:00,761 | INFO | uvicorn.access | 127.0.0.1:60301 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:58:51,936 | INFO | uvicorn.access | 127.0.0.1:55781 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:58:54,259 | INFO | uvicorn.access | 127.0.0.1:53208 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:58:56,505 | INFO | uvicorn.access | 127.0.0.1:55781 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-13 23:59:00,854 | INFO | uvicorn.access | 127.0.0.1:59567 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-13 23:59:01,320 | INFO | uvicorn.access | 127.0.0.1:59567 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-13 23:59:01,341 | INFO | uvicorn.access | 127.0.0.1:59567 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200

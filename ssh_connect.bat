@@ -1,0 +1,1 @@
+ssh -i C:\Users\ASUS\.ssh\Jupiter.pem -N -L 27019:127.0.0.1:27017 ubuntu@188.166.188.153

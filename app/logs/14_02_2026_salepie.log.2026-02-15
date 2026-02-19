@@ -1,0 +1,1119 @@
+2026-02-15 00:00:15,112 | INFO | uvicorn.access | 127.0.0.1:58390 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:00:15,150 | INFO | uvicorn.access | 127.0.0.1:61596 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:00:25,608 | INFO | uvicorn.access | 127.0.0.1:56089 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 00:00:28,686 | INFO | uvicorn.access | 127.0.0.1:52282 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:00:29,150 | INFO | uvicorn.access | 127.0.0.1:52282 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:00:29,245 | INFO | uvicorn.access | 127.0.0.1:51665 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:00:29,245 | INFO | uvicorn.access | 127.0.0.1:53600 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:00:29,246 | INFO | uvicorn.access | 127.0.0.1:62432 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:00:54,409 | INFO | uvicorn.access | 127.0.0.1:52267 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 00:01:54,971 | INFO | uvicorn.access | 127.0.0.1:58293 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:01:55,334 | INFO | uvicorn.access | 127.0.0.1:61464 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:01:55,337 | INFO | uvicorn.access | 127.0.0.1:50790 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:01:55,337 | INFO | uvicorn.access | 127.0.0.1:62485 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:02:05,286 | INFO | uvicorn.access | 127.0.0.1:50996 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:05,332 | INFO | uvicorn.access | 127.0.0.1:51648 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:02:05,337 | INFO | uvicorn.access | 127.0.0.1:51648 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:02:05,343 | INFO | uvicorn.access | 127.0.0.1:51648 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:02:23,428 | INFO | uvicorn.access | 127.0.0.1:61502 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=%E0%B9%88%E0%B8%B3%E0%B8%B7&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:26,243 | INFO | uvicorn.access | 127.0.0.1:61502 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=%E0%B9%88jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:34,753 | INFO | uvicorn.access | 127.0.0.1:52969 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:34,845 | INFO | uvicorn.access | 127.0.0.1:49800 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:02:34,845 | INFO | uvicorn.access | 127.0.0.1:53393 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:02:34,853 | INFO | uvicorn.access | 127.0.0.1:49800 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:02:41,575 | INFO | uvicorn.access | 127.0.0.1:60094 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:45,272 | INFO | uvicorn.access | 127.0.0.1:60094 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:02:45,294 | INFO | uvicorn.access | 127.0.0.1:65506 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:02:45,300 | INFO | uvicorn.access | 127.0.0.1:65506 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:02:45,305 | INFO | uvicorn.access | 127.0.0.1:65506 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:08,643 | INFO | uvicorn.access | 127.0.0.1:62399 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:09,110 | INFO | uvicorn.access | 127.0.0.1:52356 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:09,112 | INFO | uvicorn.access | 127.0.0.1:62651 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:09,112 | INFO | uvicorn.access | 127.0.0.1:54651 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:20,715 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:20,730 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:20,752 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:21,482 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:22,150 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:22,162 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:22,172 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:22,183 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:22,537 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:23,564 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:23,905 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:23,914 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:23,936 | INFO | uvicorn.access | 127.0.0.1:54832 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:24,357 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:24,602 | INFO | uvicorn.access | 127.0.0.1:56036 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:39,812 | INFO | uvicorn.access | 127.0.0.1:59319 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:39,812 | INFO | uvicorn.access | 127.0.0.1:63597 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:39,817 | INFO | uvicorn.access | 127.0.0.1:59319 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:40,356 | INFO | uvicorn.access | 127.0.0.1:56021 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:40,431 | INFO | uvicorn.access | 127.0.0.1:63581 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:40,955 | INFO | uvicorn.access | 127.0.0.1:59319 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:03:40,964 | INFO | uvicorn.access | 127.0.0.1:59319 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:03:40,982 | INFO | uvicorn.access | 127.0.0.1:59319 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:03:41,600 | INFO | uvicorn.access | 127.0.0.1:63581 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:03:42,364 | INFO | uvicorn.access | 127.0.0.1:63581 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:01,099 | INFO | uvicorn.access | 127.0.0.1:59059 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:01,104 | INFO | uvicorn.access | 127.0.0.1:55397 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:01,107 | INFO | uvicorn.access | 127.0.0.1:59059 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:05:01,297 | INFO | uvicorn.access | 127.0.0.1:64404 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:01,647 | INFO | uvicorn.access | 127.0.0.1:52803 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:02,174 | INFO | uvicorn.access | 127.0.0.1:59059 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:02,183 | INFO | uvicorn.access | 127.0.0.1:59059 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:02,225 | INFO | uvicorn.access | 127.0.0.1:59059 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:05:02,981 | INFO | uvicorn.access | 127.0.0.1:52803 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:03,772 | INFO | uvicorn.access | 127.0.0.1:52803 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:22,349 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:22,358 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:22,377 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:05:22,964 | INFO | uvicorn.access | 127.0.0.1:60927 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:23,044 | INFO | uvicorn.access | 127.0.0.1:50809 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:23,727 | INFO | uvicorn.access | 127.0.0.1:50943 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:23,734 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:23,744 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:23,764 | INFO | uvicorn.access | 127.0.0.1:50353 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:05:24,361 | INFO | uvicorn.access | 127.0.0.1:50943 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:24,428 | INFO | uvicorn.access | 127.0.0.1:50809 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:24,943 | INFO | uvicorn.access | 127.0.0.1:50809 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:57,946 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:57,958 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:57,979 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:05:58,638 | INFO | uvicorn.access | 127.0.0.1:57927 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:58,693 | INFO | uvicorn.access | 127.0.0.1:57617 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:58,780 | INFO | uvicorn.access | 127.0.0.1:62940 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:05:59,815 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:05:59,845 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:05:59,850 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:06:00,298 | INFO | uvicorn.access | 127.0.0.1:62940 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:00,907 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:06:00,919 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:06:00,937 | INFO | uvicorn.access | 127.0.0.1:51258 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:06:00,949 | INFO | uvicorn.access | 127.0.0.1:62940 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:01,237 | INFO | uvicorn.access | 127.0.0.1:62940 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:02,055 | INFO | uvicorn.access | 127.0.0.1:62940 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:09,294 | INFO | uvicorn.access | 127.0.0.1:54594 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 00:06:10,167 | INFO | uvicorn.access | 127.0.0.1:54594 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 00:06:12,566 | INFO | uvicorn.access | 127.0.0.1:64858 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:13,425 | INFO | uvicorn.access | 127.0.0.1:64858 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:28,178 | INFO | uvicorn.access | 127.0.0.1:57507 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:28,371 | INFO | uvicorn.access | 127.0.0.1:57507 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:28,569 | INFO | uvicorn.access | 127.0.0.1:56165 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:06:28,763 | INFO | uvicorn.access | 127.0.0.1:57507 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:14,811 | INFO | uvicorn.access | 127.0.0.1:49233 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:15,329 | INFO | uvicorn.access | 127.0.0.1:49233 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:15,757 | INFO | uvicorn.access | 127.0.0.1:49233 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:16,166 | INFO | uvicorn.access | 127.0.0.1:49233 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:34,151 | INFO | uvicorn.access | 127.0.0.1:58380 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:34,684 | INFO | uvicorn.access | 127.0.0.1:58380 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:35,324 | INFO | uvicorn.access | 127.0.0.1:58380 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:35,795 | INFO | uvicorn.access | 127.0.0.1:58380 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:45,044 | INFO | uvicorn.access | 127.0.0.1:53828 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:47,460 | INFO | uvicorn.access | 127.0.0.1:53828 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:51,895 | INFO | uvicorn.access | 127.0.0.1:53828 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:53,990 | INFO | uvicorn.access | 127.0.0.1:53828 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:07:56,996 | INFO | uvicorn.access | 127.0.0.1:53828 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:03,293 | INFO | uvicorn.access | 127.0.0.1:56359 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:06,062 | INFO | uvicorn.access | 127.0.0.1:56359 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&roles=sale&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:08,072 | INFO | uvicorn.access | 127.0.0.1:56359 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:25,284 | INFO | uvicorn.access | 127.0.0.1:54501 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&roles=staff&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:29,052 | INFO | uvicorn.access | 127.0.0.1:54501 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:31,517 | INFO | uvicorn.access | 127.0.0.1:54501 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:34,365 | INFO | uvicorn.access | 127.0.0.1:54501 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:35,296 | INFO | uvicorn.access | 127.0.0.1:58419 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:08:35,297 | INFO | uvicorn.access | 127.0.0.1:60762 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:08:35,297 | INFO | uvicorn.access | 127.0.0.1:56032 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:08:57,453 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:08:57,468 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:08:57,488 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:08:58,222 | INFO | uvicorn.access | 127.0.0.1:57333 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:08:58,926 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:08:58,936 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:08:58,954 | INFO | uvicorn.access | 127.0.0.1:49350 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:08:59,573 | INFO | uvicorn.access | 127.0.0.1:57333 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:09:34,280 | INFO | uvicorn.access | 127.0.0.1:61323 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:09:34,282 | INFO | uvicorn.access | 127.0.0.1:64730 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:09:34,288 | INFO | uvicorn.access | 127.0.0.1:61323 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:09:34,546 | INFO | uvicorn.access | 127.0.0.1:49795 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:09:35,531 | INFO | uvicorn.access | 127.0.0.1:61323 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:09:35,539 | INFO | uvicorn.access | 127.0.0.1:64730 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:09:35,554 | INFO | uvicorn.access | 127.0.0.1:64730 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:09:35,890 | INFO | uvicorn.access | 127.0.0.1:49795 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:09:45,551 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:09:45,562 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:09:45,582 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:09:46,283 | INFO | uvicorn.access | 127.0.0.1:60278 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:09:46,994 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:09:47,003 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:09:47,018 | INFO | uvicorn.access | 127.0.0.1:62419 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:09:47,761 | INFO | uvicorn.access | 127.0.0.1:60278 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:09:55,312 | INFO | uvicorn.access | 127.0.0.1:63583 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:09:55,321 | INFO | uvicorn.access | 127.0.0.1:63583 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:09:55,336 | INFO | uvicorn.access | 127.0.0.1:63583 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:10:07,400 | INFO | uvicorn.access | 127.0.0.1:62903 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:13,710 | INFO | uvicorn.access | 127.0.0.1:62236 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%22sortBy%22:%22newest%22%7D HTTP/1.1" 200
+2026-02-15 00:10:21,252 | INFO | uvicorn.access | 127.0.0.1:51303 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:27,875 | INFO | uvicorn.access | 127.0.0.1:56315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:32,117 | INFO | uvicorn.access | 127.0.0.1:56315 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:34,942 | INFO | uvicorn.access | 127.0.0.1:56315 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:38,064 | INFO | uvicorn.access | 127.0.0.1:56315 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:10:42,158 | INFO | uvicorn.access | 127.0.0.1:56315 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:11:45,651 | INFO | uvicorn.access | 127.0.0.1:50915 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:11:56,131 | INFO | uvicorn.access | 127.0.0.1:63370 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:12:10,272 | INFO | uvicorn.access | 127.0.0.1:52157 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:12:14,437 | INFO | uvicorn.access | 127.0.0.1:52157 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:12:33,282 | INFO | uvicorn.access | 127.0.0.1:49769 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:12:33,753 | INFO | uvicorn.access | 127.0.0.1:52646 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:12:33,754 | INFO | uvicorn.access | 127.0.0.1:49224 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:12:33,755 | INFO | uvicorn.access | 127.0.0.1:53094 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:14:31,493 | INFO | uvicorn.access | 127.0.0.1:49166 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:14:32,573 | INFO | uvicorn.access | 127.0.0.1:63745 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:14:32,573 | INFO | uvicorn.access | 127.0.0.1:57809 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:14:32,579 | INFO | uvicorn.access | 127.0.0.1:65379 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:15:37,484 | INFO | uvicorn.access | 127.0.0.1:59983 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:15:38,040 | INFO | uvicorn.access | 127.0.0.1:59616 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:15:38,042 | INFO | uvicorn.access | 127.0.0.1:58184 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:15:38,043 | INFO | uvicorn.access | 127.0.0.1:63676 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:20:28,216 | INFO | uvicorn.access | 127.0.0.1:53744 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:20:28,221 | INFO | uvicorn.access | 127.0.0.1:53744 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:20:28,225 | INFO | uvicorn.access | 127.0.0.1:58892 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:20:28,298 | INFO | uvicorn.access | 127.0.0.1:50210 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:20:41,581 | INFO | uvicorn.access | 127.0.0.1:61506 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:22:36,328 | INFO | uvicorn.access | 127.0.0.1:60653 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:24:11,876 | INFO | uvicorn.access | 127.0.0.1:54204 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:24:28,288 | INFO | uvicorn.access | 127.0.0.1:64272 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:24:28,951 | INFO | uvicorn.access | 127.0.0.1:61123 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:24:28,951 | INFO | uvicorn.access | 127.0.0.1:59985 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:24:28,952 | INFO | uvicorn.access | 127.0.0.1:61063 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:24:41,846 | INFO | uvicorn.access | 127.0.0.1:49669 - "GET /user/get-user-list-in-domain?page=1&page_size=20&q&itemStatus&startDate&endDate&pageSize=20&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:24:56,460 | INFO | uvicorn.access | 127.0.0.1:57844 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:25:04,430 | INFO | uvicorn.access | 127.0.0.1:55415 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:25:04,440 | INFO | uvicorn.access | 127.0.0.1:55415 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:25:04,464 | INFO | uvicorn.access | 127.0.0.1:55415 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:25:04,992 | INFO | uvicorn.access | 127.0.0.1:57254 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:25:20,165 | INFO | uvicorn.access | 127.0.0.1:54308 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:25:20,647 | INFO | uvicorn.access | 127.0.0.1:52382 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:25:20,650 | INFO | uvicorn.access | 127.0.0.1:59152 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:25:20,651 | INFO | uvicorn.access | 127.0.0.1:62745 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:27:45,545 | INFO | uvicorn.access | 127.0.0.1:63178 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:27:45,546 | INFO | uvicorn.access | 127.0.0.1:56865 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:27:45,552 | INFO | uvicorn.access | 127.0.0.1:63178 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:27:45,908 | INFO | uvicorn.access | 127.0.0.1:62431 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:27:46,760 | INFO | uvicorn.access | 127.0.0.1:63178 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:27:46,770 | INFO | uvicorn.access | 127.0.0.1:63178 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:27:46,792 | INFO | uvicorn.access | 127.0.0.1:63178 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:27:47,466 | INFO | uvicorn.access | 127.0.0.1:62431 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:03,088 | INFO | uvicorn.access | 127.0.0.1:59442 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:03,228 | INFO | uvicorn.access | 127.0.0.1:55826 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:28:03,228 | INFO | uvicorn.access | 127.0.0.1:59025 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:28:03,233 | INFO | uvicorn.access | 127.0.0.1:55826 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:28:14,301 | INFO | uvicorn.access | 127.0.0.1:58287 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:26,821 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:28:26,834 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:28:26,860 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:28:27,581 | INFO | uvicorn.access | 127.0.0.1:52767 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:28,288 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:28:28,297 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:28:28,316 | INFO | uvicorn.access | 127.0.0.1:57585 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:28:28,905 | INFO | uvicorn.access | 127.0.0.1:52767 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:43,026 | INFO | uvicorn.access | 127.0.0.1:53882 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:28:44,600 | INFO | uvicorn.access | 127.0.0.1:53882 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:29:28,195 | INFO | uvicorn.access | 127.0.0.1:62219 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:29:28,771 | INFO | uvicorn.access | 127.0.0.1:63290 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:29:28,772 | INFO | uvicorn.access | 127.0.0.1:56783 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:29:28,773 | INFO | uvicorn.access | 127.0.0.1:60489 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:30:21,562 | INFO | uvicorn.access | 127.0.0.1:63132 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=a&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:30:21,910 | INFO | uvicorn.access | 127.0.0.1:56310 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:30:21,915 | INFO | uvicorn.access | 127.0.0.1:56310 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:30:21,919 | INFO | uvicorn.access | 127.0.0.1:56310 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:30:42,417 | INFO | uvicorn.access | 127.0.0.1:58193 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:33:26,455 | INFO | uvicorn.access | 127.0.0.1:61562 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:33:26,459 | INFO | uvicorn.access | 127.0.0.1:61562 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:33:26,466 | INFO | uvicorn.access | 127.0.0.1:61562 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:33:36,115 | INFO | uvicorn.access | 127.0.0.1:56970 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:33:36,429 | INFO | uvicorn.access | 127.0.0.1:61064 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:33:36,431 | INFO | uvicorn.access | 127.0.0.1:52911 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:33:36,432 | INFO | uvicorn.access | 127.0.0.1:52478 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:33:47,658 | INFO | uvicorn.access | 127.0.0.1:58655 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:33:48,401 | INFO | uvicorn.access | 127.0.0.1:64185 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:33:48,402 | INFO | uvicorn.access | 127.0.0.1:59604 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:33:48,403 | INFO | uvicorn.access | 127.0.0.1:49978 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:34:31,453 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:34:31,469 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:34:31,493 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:34:32,109 | INFO | uvicorn.access | 127.0.0.1:65320 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:34:32,752 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:34:32,761 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:34:32,779 | INFO | uvicorn.access | 127.0.0.1:65479 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:34:33,133 | INFO | uvicorn.access | 127.0.0.1:65320 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:34:40,759 | INFO | uvicorn.access | 127.0.0.1:50984 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:34:41,604 | INFO | uvicorn.access | 127.0.0.1:59516 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:34:41,607 | INFO | uvicorn.access | 127.0.0.1:55900 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:34:41,609 | INFO | uvicorn.access | 127.0.0.1:62796 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:35:20,310 | INFO | uvicorn.access | 127.0.0.1:64846 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:35:20,317 | INFO | uvicorn.access | 127.0.0.1:64846 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:35:20,339 | INFO | uvicorn.access | 127.0.0.1:64846 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:35:31,293 | INFO | uvicorn.access | 127.0.0.1:51978 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:35:31,826 | INFO | uvicorn.access | 127.0.0.1:61901 - "GET /static/uploads/user/1faeba48-2596-4d6f-bbf9-ed28d6cc548a/staff_8b39cf3f2d914a9eabc998b449024ac8.png HTTP/1.1" 200
+2026-02-15 00:35:31,828 | INFO | uvicorn.access | 127.0.0.1:60957 - "GET /static/uploads/user/21270d97-8b35-460c-bc7a-31f6bf28d4a7/staff_f1ca2234c7944736aa567a31f7f4aed3.png HTTP/1.1" 200
+2026-02-15 00:35:31,829 | INFO | uvicorn.access | 127.0.0.1:60180 - "GET /static/uploads/user/82090846-34e2-40b9-8ead-c3f3a1473064/staff_e6191c28c03a4651827706449b8c2301.png HTTP/1.1" 200
+2026-02-15 00:36:14,693 | INFO | uvicorn.access | 127.0.0.1:49682 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:38:59,367 | INFO | uvicorn.access | 127.0.0.1:52506 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:39:08,009 | INFO | uvicorn.access | 127.0.0.1:57962 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:39:09,958 | INFO | uvicorn.access | 127.0.0.1:57962 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:39:34,597 | INFO | uvicorn.access | 127.0.0.1:57302 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:03,801 | INFO | uvicorn.access | 127.0.0.1:49219 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:10,024 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:11,143 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:16,530 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:20,208 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:24,399 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:25,257 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:30,622 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:34,097 | INFO | uvicorn.access | 127.0.0.1:58738 - "GET /user/get-user-list-in-domain?page=1&page_size=20&q&itemStatus&startDate&endDate&pageSize=20&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:40,854 | INFO | uvicorn.access | 127.0.0.1:50223 - "GET /user/get-user-list-in-domain?page=1&page_size=20&q=jen&itemStatus&startDate&endDate&pageSize=20&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:44,853 | INFO | uvicorn.access | 127.0.0.1:50223 - "GET /user/get-user-list-in-domain?page=1&page_size=20&q&itemStatus&startDate&endDate&pageSize=20&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 00:40:47,874 | INFO | uvicorn.access | 127.0.0.1:50223 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 10:42:43,333 | INFO | uvicorn.access | 127.0.0.1:61269 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 11:20:30,530 | INFO | uvicorn.access | 127.0.0.1:53037 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 11:20:47,017 | INFO | uvicorn.access | 127.0.0.1:64185 - "OPTIONS /auth/login HTTP/1.1" 200
+2026-02-15 11:21:17,445 | INFO | uvicorn.access | 127.0.0.1:62661 - "POST /auth/login HTTP/1.1" 500
+2026-02-15 11:21:17,446 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\api\v1\endpoints\authApi.py", line 283, in login_for_access_token
+    user_db = await userRepo.getUserByEmail(db, form_data.email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 11:25:02,497 | INFO | uvicorn.access | 127.0.0.1:53695 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 401
+2026-02-15 11:25:10,067 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-15 11:25:10,067 | INFO | uvicorn.access | 127.0.0.1:53916 - "POST /auth/login HTTP/1.1" 200
+2026-02-15 11:25:35,247 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:36,212 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:37,139 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:38,221 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:38,898 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:39,517 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:43,254 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:47,567 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:49,687 | INFO | uvicorn.access | 127.0.0.1:53773 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:25:57,792 | INFO | uvicorn.access | 127.0.0.1:56102 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:26:07,011 | INFO | uvicorn.access | 127.0.0.1:54533 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=david&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:26:12,772 | INFO | uvicorn.access | 127.0.0.1:57141 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&roles=staff&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:00,027 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:00,747 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:04,949 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=admin&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:08,214 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:09,386 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=manager&roles=staff&roles=admin&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:13,625 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:17,300 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&category=sale&category=travel&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:17,954 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&category=sale&category=travel&category=organization&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:21,861 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&category=sale&category=travel&category=organization&sortBy=%7B%22sortBy%22:%22newest%22%7D HTTP/1.1" 200
+2026-02-15 11:42:23,439 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&category=sale&category=travel&category=organization&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:26,287 | INFO | uvicorn.access | 127.0.0.1:61710 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:33,748 | INFO | uvicorn.access | 127.0.0.1:52841 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:36,087 | INFO | uvicorn.access | 127.0.0.1:52841 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:42:39,345 | INFO | uvicorn.access | 127.0.0.1:52841 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:43:44,043 | INFO | uvicorn.access | 127.0.0.1:50740 - "GET /user/get-user-list-in-domain?page=2&page_size=10&q=%E0%B9%88%E0%B8%B3%E0%B8%B7&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:43:44,835 | INFO | uvicorn.access | 127.0.0.1:50740 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=%E0%B9%88%E0%B8%B3%E0%B8%B7&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:43:47,062 | INFO | uvicorn.access | 127.0.0.1:50740 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=%E0%B9%88%E0%B8%B3%E0%B8%B7jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:43:49,939 | INFO | uvicorn.access | 127.0.0.1:50740 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q=jen&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:43:52,787 | INFO | uvicorn.access | 127.0.0.1:50740 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:44:00,190 | INFO | uvicorn.access | 127.0.0.1:61294 - "GET /user/get-user-list-in-domain?page=1&page_size=100&q&itemStatus&startDate&endDate&pageSize=100&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:44:08,172 | INFO | uvicorn.access | 127.0.0.1:55784 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:44:52,068 | INFO | uvicorn.access | 127.0.0.1:49803 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 11:44:55,972 | INFO | uvicorn.access | 127.0.0.1:49803 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 12:43:05,274 | INFO | uvicorn.access | 127.0.0.1:58587 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 12:46:44,836 | INFO | uvicorn.access | 127.0.0.1:57288 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 13:12:32,202 | INFO | uvicorn.access | 127.0.0.1:52450 - "GET /salepie-api/products?page=1&page_size=10&q&itemStatus&startDate&endDate&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 13:13:29,209 | INFO | uvicorn.access | 127.0.0.1:63865 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 14:07:50,533 | INFO | uvicorn.access | 127.0.0.1:58424 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 14:07:50,533 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 14:08:20,937 | INFO | uvicorn.access | 127.0.0.1:52452 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 14:08:20,937 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 21:33:35,176 | INFO | uvicorn.access | 127.0.0.1:58222 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 21:33:37,671 | INFO | uvicorn.access | 127.0.0.1:52571 - "OPTIONS /auth/login HTTP/1.1" 200
+2026-02-15 21:33:38,212 | INFO | salepie.auth | Login attempt: arina@example.com
+2026-02-15 21:33:38,212 | INFO | uvicorn.access | 127.0.0.1:58222 - "POST /auth/login HTTP/1.1" 200
+2026-02-15 21:33:42,813 | INFO | uvicorn.access | 127.0.0.1:58222 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 21:34:14,648 | INFO | uvicorn.access | 127.0.0.1:63845 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&roles=owner&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 21:34:18,458 | INFO | uvicorn.access | 127.0.0.1:63845 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 200
+2026-02-15 22:27:04,348 | INFO | uvicorn.access | 127.0.0.1:64916 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 22:27:04,348 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 22:27:34,858 | INFO | uvicorn.access | 127.0.0.1:51923 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 22:27:34,859 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 22:55:24,620 | INFO | uvicorn.access | 127.0.0.1:58972 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 22:55:24,620 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 22:55:54,648 | INFO | uvicorn.access | 127.0.0.1:57678 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 22:55:54,649 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 23:09:10,394 | INFO | uvicorn.access | 127.0.0.1:59162 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 23:09:10,394 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2026-02-15 23:09:40,489 | INFO | uvicorn.access | 127.0.0.1:51936 - "GET /user/get-user-list-in-domain?page=1&page_size=10&q&itemStatus&startDate&endDate&pageSize=10&sortBy=%7B%7D HTTP/1.1" 500
+2026-02-15 23:09:40,490 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 615, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\authRepo.py", line 271, in get_current_user
+    userDb = await userRepo.getUserByEmail(db=db, email=email)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\app\repo\userRepo.py", line 30, in getUserByEmail
+    row = await db["salepiev1"]["user"].find_one({ "email" :  email })
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\collection.py", line 1709, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\_csot.py", line 120, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2689, in _read
+    self._server = self._get_server()
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 398, in select_server
+    server = self._select_server(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\ASUS\Documents\Salepie\salepie-admin-api\venv\lib\site-packages\pymongo\synchronous\topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 69907a219306373f79c5b497, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27019: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>

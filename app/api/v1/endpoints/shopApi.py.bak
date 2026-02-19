@@ -1,0 +1,259 @@
+from typing import List, Optional
+from fastapi import APIRouter, Depends, HTTPException, Query
+from database.mongodb import AsyncIOMotorClient, get_database
+from repo import authRepo
+from models import user
+from models import shop as models_shop 
+from utils import util
+from utils.datetime_util import now
+
+import logging
+import traceback
+import sys
+from datetime import datetime
+from pathlib import Path
+
+# =========================================================
+# 📝 SETUP LOGGING (Dynamic Filename: dd_mm_yyyy_salepie.log)
+# =========================================================
+router = APIRouter()
+
+# 1. สร้าง Folder logs ถ้ายังไม่มี
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# 2. สร้างชื่อไฟล์ตามวันที่
+current_date_str = datetime.now().strftime("%d_%m_%Y")
+log_filename = f"{current_date_str}_salepie.log"
+log_filepath = log_dir / log_filename
+
+# 3. Config Logger
+logging.basicConfig(
+    filename=str(log_filepath),
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    force=True # บังคับให้ใช้ config นี้ (กรณีมีการ config ซ้ำ)
+)
+
+logger = logging.getLogger("salepie.shop")
+
+# =========================================================
+# [Shop-1] Get Shop Info
+# =========================================================
+@router.get("/shop-info", response_model=models_shop.ShopInfoOut, tags=["Shop"])
+async def get_shop_info(
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    try:
+        logger.info(f"Fetching shop info for domain: {currentUser.domainId}")
+        
+        doc = await db["salepiev1"]["shopInfo"].find_one({"uid": currentUser.domainId})
+        
+        if not doc:
+            logger.warning(f"Shop info not found for domain: {currentUser.domainId}")
+            raise HTTPException(status_code=404, detail="Shop info not found")
+        
+        if "_id" in doc: doc.pop("_id")
+        return models_shop.ShopInfoOut(**doc)
+
+    except HTTPException as he:
+        raise he  # ปล่อยให้ FastAPI จัดการ HTTP Error ปกติ
+    except Exception as e:
+        # บันทึก Error ลง Log File พร้อมบรรทัดที่เกิดเหตุ
+        logger.error(f"Error fetching shop info: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+# =========================================================
+# [Shop-2] Upsert Shop Info
+# =========================================================
+@router.post("/shop-info", response_model=models_shop.ShopInfoOut, tags=["Shop"])
+async def upsert_shop_info(
+    req: models_shop.ShopInfoReq,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    try:
+        current_time = now()
+        shop_uid = currentUser.domainId
+        logger.info(f"Upserting shop info for: {shop_uid}")
+
+        existing = await db["salepiev1"]["shopInfo"].find_one({"uid": shop_uid})
+
+        if existing:
+            # Update
+            update_data = req.model_dump(exclude_unset=True)
+            update_data.update({
+                "updateBy": currentUser.email,
+                "updateDateTime": current_time
+            })
+            
+            await db["salepiev1"]["shopInfo"].update_one(
+                {"uid": shop_uid},
+                {"$set": update_data}
+            )
+            logger.info(f"Updated shop info: {shop_uid}")
+            
+            # Fetch updated
+            doc = await db["salepiev1"]["shopInfo"].find_one({"uid": shop_uid})
+        else:
+            # Create New
+            new_shop = models_shop.ShopInfoDB(
+                **req.model_dump(),
+                uid=shop_uid,
+                createBy=currentUser.email,
+                updateBy=currentUser.email
+            )
+            await db["salepiev1"]["shopInfo"].insert_one(new_shop.model_dump())
+            logger.info(f"Created new shop info: {shop_uid}")
+            doc = new_shop.model_dump()
+
+        if "_id" in doc: doc.pop("_id")
+        return models_shop.ShopInfoOut(**doc)
+
+    except Exception as e:
+        logger.error(f"Error upserting shop info: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Failed to save shop info")
+
+
+# =========================================================
+# [Branch-1] Create Branch
+# =========================================================
+@router.post("/branch", response_model=models_shop.BranchOut, tags=["Shop-Branch"])
+async def create_branch(
+    req: models_shop.BranchReq,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    try:
+        new_uid = str(util.getUuid())
+        logger.info(f"Creating branch: {req.branchName} for shop: {currentUser.domainId}")
+
+        branch_db = models_shop.BranchDB(
+            **req.model_dump(),
+            uid=new_uid,
+            ShopInfoId=currentUser.domainId,
+            createBy=currentUser.email,
+            updateBy=currentUser.email
+        )
+        
+        res = await db["salepiev1"]["branch"].insert_one(branch_db.model_dump())
+        
+        if not res.acknowledged:
+            logger.error("MongoDB did not acknowledge insert_one for branch")
+            raise HTTPException(status_code=500, detail="Database error: Failed to create branch")
+            
+        logger.info(f"Branch created successfully: {new_uid}")
+        return branch_db
+
+    except Exception as e:
+        logger.error(f"Error creating branch: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Failed to create branch")
+
+# =========================================================
+# [Branch-2] List Branches
+# =========================================================
+@router.get("/branch", response_model=List[models_shop.BranchOut], tags=["Shop-Branch"])
+async def list_branches(
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    logger.info(f"**************************************************")
+    try:
+        logger.info(f"Listing branches for shop: {currentUser.domainId}")
+        
+        cursor = db["salepiev1"]["branch"].find({
+            "shopInfoId": currentUser.domainId,
+            "deleted": {"$ne": True}
+        })
+        branches = await cursor.to_list(length=100)
+        
+        results = []
+        for b in branches:
+            if "_id" in b: b.pop("_id")
+            results.append(models_shop.BranchOut(**b))
+            
+        logger.info(f"Found {len(results)} branches")
+        return results
+
+    except Exception as e:
+        logger.error(f"Error listing branches: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve branches")
+
+# =========================================================
+# [Branch-3] Update Branch
+# =========================================================
+@router.put("/branch/{uid}", response_model=models_shop.BranchOut, tags=["Shop-Branch"])
+async def update_branch(
+    uid: str,
+    req: models_shop.BranchReq,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    try:
+        logger.info(f"Updating branch {uid} for shop {currentUser.domainId}")
+        
+        # Check ownership
+        existing = await db["salepiev1"]["branch"].find_one({"uid": uid, "ShopInfoId": currentUser.domainId})
+        if not existing:
+            logger.warning(f"Branch {uid} not found or unauthorized access")
+            raise HTTPException(status_code=404, detail="Branch not found")
+
+        update_data = req.model_dump(exclude_unset=True)
+        update_data.update({
+            "updateBy": currentUser.email,
+            "updateDateTime": now()
+        })
+
+        await db["salepiev1"]["branch"].update_one(
+            {"uid": uid},
+            {"$set": update_data}
+        )
+        
+        updated_doc = await db["salepiev1"]["branch"].find_one({"uid": uid})
+        if "_id" in updated_doc: updated_doc.pop("_id")
+        
+        logger.info(f"Branch {uid} updated successfully")
+        return models_shop.BranchOut(**updated_doc)
+
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        logger.error(f"Error updating branch {uid}: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Failed to update branch")
+
+# =========================================================
+# [Branch-4] Delete Branch
+# =========================================================
+@router.delete("/branch/{uid}", tags=["Shop-Branch"])
+async def delete_branch(
+    uid: str,
+    db: AsyncIOMotorClient = Depends(get_database),
+    currentUser: user.UserDb = Depends(authRepo.get_current_active_user)
+):
+    try:
+        logger.info(f"Deleting branch {uid} (Soft delete)")
+
+        res = await db["salepiev1"]["branch"].update_one(
+            {"uid": uid, "ShopInfoId": currentUser.domainId},
+            {"$set": {
+                "deleted": True,
+                "updateBy": currentUser.email,
+                "updateDateTime": now()
+            }}
+        )
+        
+        if res.modified_count == 0:
+            logger.warning(f"Branch {uid} deletion failed: Not found or already deleted")
+            raise HTTPException(status_code=404, detail="Branch not found or already deleted")
+            
+        logger.info(f"Branch {uid} deleted successfully")
+        return {"status": "success", "message": "Branch deleted"}
+
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        logger.error(f"Error deleting branch {uid}: {str(e)}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail="Failed to delete branch") 
+        
+        

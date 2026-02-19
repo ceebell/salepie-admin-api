@@ -5,13 +5,16 @@ from database.mongodb import AsyncIOMotorClient, get_database
 # *** เปลี่ยน import app ให้ตรงกับไฟล์ที่ประกาศ FastAPI ของคุณ ***
 # เช่นถ้า app อยู่ใน main.py ก็ from main import app
 # หรือถ้าอยู่ใน authApi.py ก็ from authApi import app
-from database.mongodb import get_database
+# from database.mongodb import get_database
 
 from httpx import AsyncClient
 from httpx import ASGITransport
 
 from main import app   
 from database.mongodb import get_database
+
+# ✅ Log setup
+from core.logging_config import setup_logging
 
 # @pytest.fixture
 # async def auth_client(client):
@@ -43,10 +46,11 @@ from database.mongodb import get_database
 
 
 
-
-
-
-
+# @pytest.fixture(scope="session", autouse=True)
+# def configure_logging_for_test():
+#     print("\n[DEBUG] 🟢 Starting Logging Setup...") # <-- เพิ่มบรรทัดนี้
+#     setup_logging()
+#     print("[DEBUG] ✅ Logging Setup Completed.")    # <-- เพิ่มบรรทัดนี้
 
 @pytest.fixture
 async def db():
@@ -99,11 +103,17 @@ async def auth_client(client):
 @pytest_asyncio.fixture(scope="function")
 async def client():
     # -------------------------------
-    # 1) บังคับให้ FastAPI รัน startup()
+    # ⭐ 1) บังคับให้ FastAPI รัน startup()
     # -------------------------------
     await app.router.startup()
+
+    # ⭐ 2. เรียก Setup Logging "หลัง" startup ()
+    # นี่คือจุดสำคัญที่ทำให้ Log กลับมาเขียนไฟล์ได้หลังโดน Uvicorn ทับ
+    setup_logging()
+
+
     # -------------------------------
-    # 2) Override get_database → ใช้ DB จริง
+    # ⭐ 3) Override get_database → ใช้ DB จริง
     # -------------------------------
     async def override_get_database():
         return await get_database()  # เรียก DB จริง

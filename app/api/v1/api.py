@@ -2,7 +2,7 @@ from fastapi import FastAPI, Body, APIRouter, Depends
 
 # from api.v1.endpoints import itemApi, authApi,  gauth, fbauth, alexApi, shopApi, lineLogin, fileApi, eCouponApi, testApi #genapiApi
 
-from api.v1.endpoints import salepieApi, authApi, userApi, productApi
+from api.v1.endpoints import salepieApi, authApi, userApi, productApi, shopApi
 
 
 api_router = APIRouter()
@@ -17,7 +17,7 @@ api_router.include_router(authApi.router, prefix="/auth")
 api_router.include_router(userApi.router, prefix="/user")
 # api_router.include_router(alexApi.router, prefix="/alex")
 # api_router.include_router(genapiApi.router, prefix="/genapi")
-# api_router.include_router(shopApi.router, prefix="/shop")
+api_router.include_router(shopApi.router, prefix="/shop")
 # api_router.include_router(lineLogin.router, prefix="/line")
 # api_router.include_router(testApi.router, prefix="/test")
 
