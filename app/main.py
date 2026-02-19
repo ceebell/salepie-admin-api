@@ -154,6 +154,14 @@ app.add_middleware(
 # Logging zone
 # logger = logging.getLogger("salepie")
 
+@app.get("/health")
+def health_check():
+    return {
+        "status": "ok",
+        "version": "0.0.2", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
+        "message": "Deploy success!"
+    }
+
 # *** MOTOR PYMONG
 app.add_event_handler("startup", connect_to_mongo)
 app.add_event_handler("shutdown", close_mongo_connection)
