@@ -158,7 +158,7 @@ app.add_middleware(
 def health_check():
     return {
         "status": "ok",
-        "version": "0.0.10", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
+        "version": "0.0.11", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
         "message": "Deploy success!"
     }
 
