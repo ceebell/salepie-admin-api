@@ -145,7 +145,8 @@ app.add_middleware(
     "http://localhost:3500",
         "http://127.0.0.1:3500",
         "http://127.0.0.1:8000",
-        "http://188.166.188.153"
+        "http://188.166.188.153",
+        "https://sp.alexrental.app"
         ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -160,7 +161,7 @@ app.add_middleware(
 def health_check():
     return {
         "status": "ok",
-        "version": "0.0.18", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
+        "version": "0.0.19", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
         "message": "Deploy success!"
     }
 
