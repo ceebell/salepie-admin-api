@@ -343,11 +343,12 @@ async def login_for_access_token(
     response.set_cookie(
         key="Authorization",        # ชื่อ Cookie ต้องตรงกับที่ Class OAuth2PasswordBearerCookie ไป get มา
         value=access_token, 
-        httponly=True,              # True เพื่อความปลอดภัย (JS อ่านไม่ได้)
+        httponly=True,   
+        secure=True,            # True เพื่อความปลอดภัย (JS อ่านไม่ได้)
         max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
         expires=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
-        samesite="none",             # ใช้ lax สำหรับเว็บทั่วไป
-        secure=False,  
+        samesite="none",           # ใช้ lax สำหรับเว็บทั่วไป
+        path="/",
     )
 
 
