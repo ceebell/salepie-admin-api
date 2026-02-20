@@ -325,14 +325,28 @@ async def login_for_access_token(
     # 4. *** จุดสำคัญ: Set Cookie กลับไปที่ Nuxt ***
     # Class OAuth2PasswordBearerCookie ของคุณเช็คว่า scheme == "bearer"
     # ดังนั้น value ใน cookie ต้องเป็น "Bearer <token>"
-    
+
+
+    # ⭐⭐⭐⭐⭐set cookie for PRODUCTION
+    # response.set_cookie(
+    #     key="Authorization",        # ชื่อ Cookie ต้องตรงกับที่ Class OAuth2PasswordBearerCookie ไป get มา
+    #     value=access_token, 
+    #     httponly=True,              # True เพื่อความปลอดภัย (JS อ่านไม่ได้)
+    #     max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
+    #     expires=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
+    #     samesite="Lax",             # ใช้ lax สำหรับเว็บทั่วไป
+    #     secure=True,  
+    # )
+
+
+    # ⭐⭐⭐⭐⭐set cookie for DEVELOPMENT
     response.set_cookie(
         key="Authorization",        # ชื่อ Cookie ต้องตรงกับที่ Class OAuth2PasswordBearerCookie ไป get มา
         value=access_token, 
         httponly=True,              # True เพื่อความปลอดภัย (JS อ่านไม่ได้)
         max_age=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
         expires=ACCESS_TOKEN_EXPIRE_HOURS * 3600,
-        samesite="Lax",             # ใช้ lax สำหรับเว็บทั่วไป
+        samesite="None",             # ใช้ lax สำหรับเว็บทั่วไป
         secure=False,  
     )
 

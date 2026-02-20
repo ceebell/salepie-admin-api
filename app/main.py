@@ -144,7 +144,9 @@ app.add_middleware(
     allow_origins=[ "http://localhost:8000",
     "http://localhost:3500",
         "http://127.0.0.1:3500",
-        "http://127.0.0.1:8000"],
+        "http://127.0.0.1:8000"
+        "http://188.166.188.153"
+        ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -158,7 +160,7 @@ app.add_middleware(
 def health_check():
     return {
         "status": "ok",
-        "version": "0.0.14", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
+        "version": "0.0.15", # เปลี่ยนตัวเลขนี้ทุกครั้งที่แก้โค้ดสำคัญ
         "message": "Deploy success!"
     }
 
