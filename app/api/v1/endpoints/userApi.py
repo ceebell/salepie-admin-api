@@ -326,8 +326,9 @@ async def register_user(reguser: user.UserCreate,  db: AsyncIOMotorClient =  Dep
 
     return userdb
 
-USER_IMAGE_URL = "http://localhost:8000/static/uploads/user"
-UPLOAD_ROOT = Path("static/uploads/user")
+# USER_IMAGE_URL = "http://localhost:8000/static/uploads/user"
+USER_IMAGE_URL = "https://sp.alexrental.app/uploads/user"
+UPLOAD_ROOT = Path("/var/www/salepie/uploads/user")
 ALLOWED = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
 MAX_IMAGE_BYTES = 5 * 1024 * 1024  # 5MB
 
