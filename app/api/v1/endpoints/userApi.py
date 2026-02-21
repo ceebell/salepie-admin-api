@@ -27,6 +27,8 @@ import uuid ,base64, re
 from pathlib import Path
 from datetime import datetime
 
+import logging
+logger = logging.getLogger("salepie.user")
 
 router = APIRouter()
 
@@ -393,7 +395,7 @@ async def editStaffProfile(
     new_images = []
 
     for idx, img in enumerate(editForm.images or []):
-        print(f"IMAGE ::: for loop ")
+        logger.info(f"IMAGE ::: for loop ")
         # ถ้าส่ง deleted มา → เก็บสถานะไว้ (ตามโครงสร้างคุณ)
         if img.deleted:
             new_images.append({
@@ -401,9 +403,9 @@ async def editStaffProfile(
                 "deleted": True,
             })
             continue
-        print(f"IMAGE ::: ON data Url")
+        logger.info(f"IMAGE ::: ON data Url")
         if img.dataUrl:
-            print(f"IMAGE ::: img.dataUrl comes")
+            logger.info(f"IMAGE ::: img.dataUrl comes")
             # ✅✅ 1. เพิ่ม Logic: ลบไฟล์เก่าทั้งหมดในโฟลเดอร์ของ User นี้ทิ้งก่อน
             user_dir = UPLOAD_ROOT / userDb.uid
             
@@ -412,13 +414,13 @@ async def editStaffProfile(
                     if file_path.is_file():
                         try:
                             file_path.unlink() # ลบไฟล์
-                            print(f"Deleted old file: {file_path}")
+                            logger.info(f"Deleted old file: {file_path}")
                         except Exception as e:
-                            print(f"Error deleting {file_path}: {e}")
+                            logger.info(f"Error deleting {file_path}: {e}")
             
             # ✅✅ 2. จากนั้นค่อยบันทึกไฟล์ใหม่
             saved = save_data_url_image(img.dataUrl, userDb.uid)
-            print(f"* * * * *This is images {saved}")
+            logger.info(f"* * * * *This is images {saved}")
 
             new_images.append({
                 "seq": img.seq if img.seq is not None else idx,
@@ -426,27 +428,27 @@ async def editStaffProfile(
                 **saved
             })
 
-            print(f"\n\n\n\n🧮🧮🧮🧮 new_images >>> ",new_images)
+            logger.info(f"\n\n\n\n🧮🧮🧮🧮 new_images >>> ",new_images)
         elif not img.getUrl :
-            print(f"IMAGE ::: not img.getUrl")
+            logger.info(f"IMAGE ::: not img.getUrl")
             # ถ้าไม่มี dataUrl และไม่ deleted → ข้าม หรือจะ error ก็ได้
             # raise HTTPException(400, "image missing dataUrl")
-            print(f"I NEED TO DELETE !!!! {userDb.email}'s image")
+            logger.info(f"I NEED TO DELETE !!!! {userDb.email}'s image")
             userDb.images = []
             break
-        print(f"IMAGE ::: End each loop")
+        logger.info(f"IMAGE ::: End each loop")
         # เลือกพฤติกรรม:
         # (A) replace ทั้ง images
         if new_images:
             userDb.images = new_images
 
-    print(f"IMAGE ::: End ALL loop")
+    logger.info(f"IMAGE ::: End ALL loop")
     
     
     # userDb.admin = searchForm.admin
     edit = await db["salepiev1"]["user"].update_one({"uid": userId}, {'$set': userDb.model_dump() })
     
-    print (f"edit >>> ",edit.modified_count)
+    logger.info (f"edit >>> ",edit.modified_count)
     
     userOut = user.UserOut(**userDb.model_dump())
 
