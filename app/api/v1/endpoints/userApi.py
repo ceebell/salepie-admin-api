@@ -191,7 +191,7 @@ async def editMyProfile(
         userDb =   user.UserDb(**row) 
     except:
         raise HTTPException(status_code=400, detail="Unable to get user")
-    
+    userDb.email = editForm.email
     userDb.firstName = editForm.firstName
     userDb.lastName  = editForm.lastName
     userDb.address   = editForm.address
@@ -348,8 +348,20 @@ def save_data_url_image(data_url: str, uid: str) -> dict:
     if len(raw) > MAX_IMAGE_BYTES:
         raise HTTPException(status_code=400, detail="Image too large (max 5MB)")
 
-    user_dir = UPLOAD_ROOT / uid
-    user_dir.mkdir(parents=True, exist_ok=True)
+    # user_dir = UPLOAD_ROOT / uid
+    # user_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        user_dir = UPLOAD_ROOT / uid
+        user_dir.mkdir(parents=True, exist_ok=True)  # ← error ตรงนี้
+    except PermissionError as e:
+        logger.error(f"Permission denied creating directory: {user_dir}")
+        logger.error(f"UPLOAD_ROOT = {UPLOAD_ROOT}")
+        logger.error(f"Run: sudo chown -R ubuntu:ubuntu {UPLOAD_ROOT}")
+        raise HTTPException(
+            status_code=500, 
+            detail="Server storage permission error"
+        )
 
     ext = ALLOWED.get(content_type)
     if not ext:
