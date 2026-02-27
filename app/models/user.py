@@ -213,6 +213,7 @@ class ActiveForm(BaseModel):
 
 
 class UserEditProfile(BaseModel):
+    email: Optional[EmailStr]
     firstName: Optional[str] = "" 
     lastName : Optional[str] = "" 
     address : Optional[str] = "" 
