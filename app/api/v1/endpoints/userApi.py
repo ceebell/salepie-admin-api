@@ -394,6 +394,7 @@ async def editStaffProfile(
     except:
         raise HTTPException(status_code=404, detail="Unable to get user")
     
+    userDb.email = editForm.email
     userDb.firstName = editForm.firstName
     userDb.lastName  = editForm.lastName
     userDb.address   = editForm.address
